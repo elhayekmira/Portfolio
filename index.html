@@ -11,15 +11,17 @@
 
     <style>
         :root {
-            --accent-ochre: #d69e2e;
-            --accent-ochre-hover: #b88322;
-            --accent-magenta: #c02674;
-            --accent-teal: #1a7a8c;
-            --bg-amber-linen: #f7f1e5;
-            --card-bg: rgba(253, 250, 245, 0.55);
-            --text-dark: #2d241e;
-            --text-muted: #605247;
-            --border-organic: rgba(235, 220, 203, 0.6);
+            --accent-ochre: #f0b839;
+            --accent-ochre-hover: #d69f26;
+            --card-glass: rgba(30, 24, 18, 0.55);
+            --card-glass-hover: rgba(42, 33, 24, 0.72);
+            --border-glass: rgba(255, 255, 255, 0.18);
+            --text-bright: #ffffff;
+            --text-muted: #e6ded6;
+            
+            /* Unified Warm Amber Button Color */
+            --btn-warm: #d99b26;
+            --btn-warm-hover: #be841b;
         }
 
         * {
@@ -34,9 +36,8 @@
         }
 
         body {
-            background-color: var(--bg-amber-linen);
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
-            color: var(--text-dark);
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('clothesline.jpg') center center / cover no-repeat fixed;
+            color: var(--text-bright);
             font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.6;
             min-height: 100vh;
@@ -49,24 +50,21 @@
             font-family: 'Playfair Display', serif;
         }
 
-        /* =========================
-           NAVIGATION
-        ========================= */
-
+        /* NAVIGATION */
         nav {
             display: flex;
             justify-content: flex-end;
             align-items: center;
             padding: 1.2rem 8%;
-            background: rgba(45, 36, 30, 0.92);
+            background: rgba(18, 14, 10, 0.75);
             color: #f7f1e5;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .nav-links {
@@ -76,7 +74,7 @@
         }
 
         .nav-link {
-            color: rgba(247, 241, 229, 0.85);
+            color: var(--text-muted);
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
@@ -101,17 +99,8 @@
             border-bottom: 2px solid var(--accent-ochre);
         }
 
-        /* =========================
-           HOME
-        ========================= */
-
+        /* HOME SECTION */
         .home-section {
-            position: relative;
-            background: url('clothesline.jpg');
-            background-size: cover;
-            background-position: center;
-            image-rendering: -webkit-optimize-contrast;
-            color: var(--text-dark);
             min-height: 100vh;
             min-height: 100svh;
             padding: 8rem 8% 4rem;
@@ -127,17 +116,16 @@
             z-index: 2;
             max-width: 880px;
             width: 100%;
-            min-width: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: var(--card-bg);
+            background: var(--card-glass);
             padding: 3.5rem 2.5rem;
             border-radius: 20px;
-            border: 1px solid var(--border-organic);
-            box-shadow: 0 12px 35px rgba(45, 36, 30, 0.08);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
         }
 
         .hero-title {
@@ -146,71 +134,63 @@
             line-height: 1.05;
             margin-top: 0;
             margin-bottom: 0.75rem;
-            color: var(--text-dark);
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         .hero-role {
             font-size: 1.3rem;
             font-weight: 700;
-            color: var(--accent-magenta);
+            color: var(--accent-ochre);
             margin-bottom: 1.2rem;
             letter-spacing: 0.5px;
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
         }
 
         .about-text {
             font-size: 1.1rem;
-            color: var(--text-dark);
+            color: #ffffff;
             line-height: 1.8;
             max-width: 720px;
             margin-top: 0.5rem;
             font-weight: 500;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
         }
-
-        /* =========================
-           CLIENT LOGOS
-        ========================= */
 
         .clients-section {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.85rem;
+            gap: 1.2rem;
             margin-top: 2.5rem;
             width: 100%;
-            min-width: 0;
         }
 
         .trusted-label {
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--accent-teal);
+            color: var(--accent-ochre);
             font-weight: 700;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
         }
 
         .client-logos-wrapper {
             display: flex;
-            gap: 2.2rem;
+            gap: 2.5rem;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            background: rgba(255, 255, 255, 0.45);
-            padding: 1.2rem 2.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-organic);
-            box-shadow: 0 4px 15px rgba(45, 36, 30, 0.03);
-            width: fit-content;
-            max-width: 100%;
-            margin: 0 auto;
+            width: 100%;
         }
 
         .client-logos-wrapper img {
-            height: 36px;
+            height: 40px;
             max-width: 140px;
             width: auto;
             object-fit: contain;
-            filter: none;
-            opacity: 0.85;
+            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+            opacity: 0.95;
             transition: transform 0.25s ease, opacity 0.25s ease;
         }
 
@@ -219,42 +199,53 @@
             opacity: 1;
         }
 
-        /* =========================
-           GENERAL PAGES
-        ========================= */
-
+        /* SUBPAGES (HEAVILY BLURRED BACKGROUND) */
         .page-content {
             display: none;
-            padding: 7rem 8% 5rem;
+            padding: 7.5rem 8% 5rem;
             max-width: 1200px;
             margin: 0 auto;
             flex: 1;
             width: 100%;
-            min-width: 0;
+            position: relative;
         }
 
         .page-content.active {
             display: block;
         }
 
+        .page-content:not(#home) {
+            backdrop-filter: blur(45px) brightness(0.85);
+            -webkit-backdrop-filter: blur(45px) brightness(0.85);
+            background: rgba(22, 17, 13, 0.45);
+            max-width: 100%;
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+
+        .subpage-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         .section-header {
             text-align: center;
             margin-bottom: 3.5rem;
-            background: linear-gradient(
-                135deg,
-                rgba(214, 158, 46, 0.12),
-                rgba(192, 38, 116, 0.08)
-            );
-            padding: 2.5rem 1.5rem;
-            border-radius: 12px;
-            border: 1px solid rgba(214, 158, 46, 0.2);
+            background: var(--card-glass);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
         }
 
         .section-title {
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--text-dark);
+            color: #ffffff;
             margin-bottom: 0.5rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
         }
 
         .section-intro {
@@ -269,14 +260,11 @@
         .section-divider {
             width: 50px;
             height: 3px;
-            background: var(--accent-magenta);
+            background: var(--accent-ochre);
             margin: 0 auto;
         }
 
-        /* =========================
-           GRIDS
-        ========================= */
-
+        /* GRIDS & CARDS */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -288,12 +276,10 @@
             display: flex;
             flex-direction: column;
             gap: 2rem;
-            min-width: 0;
         }
 
         .full-width-card {
             width: 100%;
-            min-width: 0;
         }
 
         .lorient-grid {
@@ -310,33 +296,29 @@
             margin-top: 1rem;
         }
 
-        /* =========================
-           CARDS
-        ========================= */
-
         .card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            border: 1px solid var(--border-organic);
+            background: var(--card-glass);
+            border-radius: 18px;
+            border: 1px solid var(--border-glass);
             padding: 2.25rem;
-            box-shadow: 0 4px 12px rgba(45, 36, 30, 0.04);
-            transition: 0.3s transform, 0.3s box-shadow;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
             display: flex;
             flex-direction: column;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            min-width: 0;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(45, 36, 30, 0.08);
-            border-color: var(--accent-ochre);
+            transform: translateY(-4px);
+            background: var(--card-glass-hover);
+            border-color: rgba(240, 184, 57, 0.5);
+            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
         }
 
         .card-tag {
-            color: var(--accent-teal);
-            font-size: 1.05rem;
+            color: var(--accent-ochre);
+            font-size: 0.95rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -346,12 +328,12 @@
             font-size: 1.4rem;
             font-weight: 700;
             margin: 0.5rem 0 0.5rem;
-            color: var(--text-dark);
+            color: #ffffff;
         }
 
         .card-desc {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             margin-bottom: 1.25rem;
         }
 
@@ -360,15 +342,11 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: var(--accent-magenta);
+            color: var(--accent-ochre);
             margin-bottom: 0.75rem;
             padding-bottom: 0.35rem;
-            border-bottom: 1px solid var(--border-organic);
+            border-bottom: 1px solid var(--border-glass);
         }
-
-        /* =========================
-           WORK / LINKS
-        ========================= */
 
         .work-list {
             display: flex;
@@ -379,26 +357,24 @@
         .work-item {
             display: flex;
             flex-direction: column;
-            min-width: 0;
         }
 
         .work-item-author {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 700;
-            color: var(--text-dark);
+            color: var(--accent-ochre);
         }
 
         .article-link {
-            color: var(--text-dark);
+            color: var(--text-bright);
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 500;
             transition: color 0.2s ease;
-            overflow-wrap: anywhere;
         }
 
         .article-link:hover {
-            color: var(--accent-magenta);
+            color: var(--accent-ochre);
             text-decoration: underline;
         }
 
@@ -410,25 +386,23 @@
         }
 
         .link-btn {
-            color: var(--accent-magenta);
+            color: var(--accent-ochre);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
-            overflow-wrap: anywhere;
+            font-size: 0.92rem;
+            transition: opacity 0.2s ease;
         }
 
         .link-btn:hover {
             text-decoration: underline;
+            opacity: 0.85;
         }
 
-        /* =========================
-           CONTACT
-        ========================= */
-
+        /* CONTACT & UNIFIED WARM BUTTONS */
         .contact-container {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.25rem;
             align-items: center;
             justify-content: center;
             margin-top: 1.5rem;
@@ -445,77 +419,53 @@
         }
 
         .btn {
-            background: var(--text-dark);
-            color: #f7f1e5;
-            padding: 0.9rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
+            padding: 0.95rem 2rem;
+            border-radius: 10px;
+            font-weight: 700;
             font-size: 1rem;
             text-decoration: none;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(45, 36, 30, 0.12);
             transition: all 0.25s ease;
-            border: 1px solid var(--text-dark);
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 0.6rem;
             flex: 1;
             min-width: 200px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+            background: var(--btn-warm);
+            color: #ffffff;
+            border: 1px solid var(--btn-warm);
         }
 
         .btn:hover {
-            transform: translateY(-2px);
-            background: #42352c;
-            box-shadow: 0 6px 18px rgba(45, 36, 30, 0.18);
+            transform: translateY(-3px);
+            background: var(--btn-warm-hover);
+            border-color: var(--btn-warm-hover);
+            color: #ffffff;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
         }
 
-        .btn-primary {
-            background: var(--accent-ochre);
-            color: var(--text-dark);
-            border-color: var(--accent-ochre);
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-ochre-hover);
-            border-color: var(--accent-ochre-hover);
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
+        /* FOOTER */
         footer {
             text-align: center;
             padding: 2.5rem 0;
-            background: #2d241e;
-            color: #ebdccb;
+            background: rgba(14, 11, 8, 0.85);
+            color: var(--text-muted);
             font-size: 0.9rem;
             margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
 
-        /* =========================
-           TABLET
-        ========================= */
-
+        /* MOBILE RESPONSIVENESS */
         @media (max-width: 900px) {
-            .lorient-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .tarjim-grid {
+            .lorient-grid, .tarjim-grid {
                 grid-template-columns: 1fr;
             }
         }
-
-        /* =========================
-           MOBILE
-        ========================= */
 
         @media (max-width: 768px) {
-
-            /* Two-row mobile navigation */
             nav {
                 justify-content: center;
                 padding: 0.8rem 4%;
@@ -526,15 +476,11 @@
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 0.35rem 0.5rem;
-                align-items: center;
                 justify-items: center;
             }
 
             .nav-link {
                 font-size: 0.76rem;
-                text-align: center;
-                padding: 0.25rem 0.15rem;
-                white-space: nowrap;
             }
 
             .home-section {
@@ -542,35 +488,15 @@
             }
 
             .hero-content {
-                padding: 2rem 1rem;
-                border-radius: 16px;
+                padding: 2rem 1.2rem;
             }
 
             .hero-title {
                 font-size: 2.6rem;
             }
 
-            .hero-role {
-                font-size: 1.1rem;
-            }
-
-            .about-text {
-                font-size: 0.95rem;
-                line-height: 1.7;
-            }
-
-            .clients-section {
-                margin-top: 2rem;
-            }
-
-            .client-logos-wrapper {
-                gap: 1rem;
-                padding: 1rem;
-                width: 100%;
-            }
-
             .client-logos-wrapper img {
-                height: 27px;
+                height: 28px;
                 max-width: 110px;
             }
 
@@ -578,166 +504,29 @@
                 padding: 7rem 5% 3rem;
             }
 
+            .page-content:not(#home) {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
             .section-header {
-                padding: 2rem 1rem;
-                margin-bottom: 2rem;
+                padding: 2rem 1.2rem;
             }
 
             .section-title {
                 font-size: 2rem;
-            }
-
-            .section-intro {
-                font-size: 0.95rem;
             }
 
             .grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .lorient-grid,
-            .tarjim-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .card {
-                padding: 1.5rem;
-            }
-
-            .card-tag {
-                font-size: 0.9rem;
-            }
-
-            .card-title {
-                font-size: 1.3rem;
-            }
-
-            .card-desc {
-                font-size: 0.9rem;
             }
 
             .btn-row {
                 flex-direction: column;
-                width: 100%;
-                gap: 0.75rem;
             }
 
             .btn {
                 width: 100%;
-                min-width: unset;
-            }
-
-            footer {
-                padding: 2rem 1rem;
-                font-size: 0.8rem;
-            }
-        }
-
-        /* =========================
-           SMALL IPHONES
-        ========================= */
-
-        @media (max-width: 480px) {
-
-            nav {
-                padding: 0.7rem 2.5%;
-            }
-
-            .nav-links {
-                gap: 0.25rem 0.3rem;
-            }
-
-            .nav-link {
-                font-size: 0.67rem;
-            }
-
-            .home-section {
-                padding: 7.5rem 4% 2.5rem;
-            }
-
-            .hero-content {
-                padding: 1.7rem 0.9rem;
-            }
-
-            .hero-title {
-                font-size: 2.2rem;
-            }
-
-            .hero-role {
-                font-size: 1rem;
-            }
-
-            .about-text {
-                font-size: 0.9rem;
-                line-height: 1.65;
-            }
-
-            .trusted-label {
-                font-size: 0.72rem;
-                letter-spacing: 1.5px;
-            }
-
-            .client-logos-wrapper {
-                gap: 0.75rem;
-                padding: 0.8rem;
-            }
-
-            .client-logos-wrapper img {
-                height: 23px;
-                max-width: 90px;
-            }
-
-            .page-content {
-                padding: 6rem 4% 2.5rem;
-            }
-
-            .section-header {
-                padding: 1.5rem 0.9rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .section-intro {
-                font-size: 0.9rem;
-            }
-
-            .card {
-                padding: 1.25rem;
-            }
-        }
-
-        /* =========================
-           VERY SMALL PHONES
-        ========================= */
-
-        @media (max-width: 360px) {
-
-            .nav-link {
-                font-size: 0.62rem;
-            }
-
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .hero-role {
-                font-size: 0.9rem;
-            }
-
-            .about-text {
-                font-size: 0.85rem;
-            }
-
-            .section-title {
-                font-size: 1.65rem;
-            }
-
-            .card {
-                padding: 1.1rem;
             }
         }
     </style>
@@ -795,681 +584,295 @@
 
     <!-- MEDIA WORK -->
     <div id="media" class="page-content">
+        <div class="subpage-inner">
 
-        <div class="section-header">
+            <div class="section-header">
+                <h2 class="section-title">Selected Media Work</h2>
+                <div class="section-divider"></div>
+                <p class="section-intro">
+                    I started my journey in media as an editor for Al Sumaria TV, then moved to the BBC before starting my freelance journey collaborating with major international names like Al Jazeera and NOS Nieuws, as well as independent filmmakers. Here is a selection of my recent work:
+                </p>
+            </div>
 
-            <h2 class="section-title">
-                Selected Media Work
-            </h2>
+            <div class="grid">
 
-            <div class="section-divider"></div>
-
-            <p class="section-intro">
-                I started my journey in media as an editor for Al Sumaria TV, then moved to the BBC before starting my freelance journey collaborating with major international names like Al Jazeera and NOS Nieuws, as well as independent filmmakers. Here is a selection of my recent work:
-            </p>
-
-        </div>
-
-        <div class="grid">
-
-            <div class="card">
-
-                <div>
-                    <span class="card-tag">
-                        Broadcast Series
-                    </span>
-
-                    <h3 class="card-title">
-                        Ma Khtalafna Series
-                    </h3>
-
-                    <p class="card-desc">
-                        Post-production coordinator for Al Araby TV / Fadaat Media Qatar, managing editing schedules, sound design, and final delivery.
-                    </p>
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Broadcast Series</span>
+                        <h3 class="card-title">Ma Khtalafna Series</h3>
+                        <p class="card-desc">
+                            Post-production coordinator for Al Araby TV / Fadaat Media Qatar, managing editing schedules, sound design, and final delivery.
+                        </p>
+                    </div>
+                    <div class="link-group">
+                        <a href="https://www.alarabyplus.com/ar/shows/ma-ikhtalafna" target="_blank" rel="noopener noreferrer" class="link-btn">
+                            Watch on Al Araby Plus →
+                        </a>
+                    </div>
                 </div>
 
-                <div class="link-group">
-                    <a href="https://www.alarabyplus.com/ar/shows/ma-ikhtalafna"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="link-btn">
-                        Watch on Al Araby Plus →
-                    </a>
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Broadcast & Digital Journalism</span>
+                        <h3 class="card-title">BBC</h3>
+                        <p class="card-desc">
+                            Edited TV programs between 2018 and 2020 (BBC Xtra, Dunyana, The Scene), as well as producing digital stories after 2020, all adhering to international media standards across broadcast and digital platforms.
+                        </p>
+                    </div>
+                    <div class="link-group">
+                        <a href="https://www.youtube.com/watch?v=5gsqGUOcnxo&list=PLJDP7klg61pI" target="_blank" rel="noopener noreferrer" class="link-btn">
+                            Stories I produced for the BBC →
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=G6iv-6H5y0w&list=PLWy7CFm-iR3Y" target="_blank" rel="noopener noreferrer" class="link-btn">
+                            Editing BBC Xtra Weekly Magazine →
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=TMdGg5JpPNQ&list=PLOtYxGAGzkHU&pp=sAgC" target="_blank" rel="noopener noreferrer" class="link-btn">
+                            Editing AL MASHHAD with Gisele Khoury →
+                        </a>
+                    </div>
                 </div>
 
             </div>
-
-            <div class="card">
-
-                <div>
-                    <span class="card-tag">
-                        Broadcast & Digital Journalism
-                    </span>
-
-                    <h3 class="card-title">
-                        BBC
-                    </h3>
-
-                    <p class="card-desc">
-                        Edited TV programs between 2018 and 2020 (BBC Xtra, Dunyana, The Scene), as well as producing digital stories after 2020, all adhering to international media standards across broadcast and digital platforms.
-                    </p>
-                </div>
-
-                <div class="link-group">
-
-                    <a href="https://www.youtube.com/watch?v=5gsqGUOcnxo&list=PLJDP7klg61pI"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="link-btn">
-                        Stories I produced for the BBC →
-                    </a>
-
-                    <a href="https://www.youtube.com/watch?v=G6iv-6H5y0w&list=PLWy7CFm-iR3Y"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="link-btn">
-                        Editing BBC Xtra Weekly Magazine →
-                    </a>
-
-                    <a href="https://www.youtube.com/watch?v=TMdGg5JpPNQ&list=PLOtYxGAGzkHU&pp=sAgC"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="link-btn">
-                        Editing AL MASHHAD with Gisele Khoury →
-                    </a>
-
-                </div>
-
-            </div>
-
         </div>
     </div>
 
     <!-- TRANSLATION -->
     <div id="translation" class="page-content">
+        <div class="subpage-inner">
 
-        <div class="section-header">
-
-            <h2 class="section-title">
-                Selected Translation Work
-            </h2>
-
-            <div class="section-divider"></div>
-
-            <p class="section-intro">
-                I translate and copyedit submission dossiers, articles, and literary books, I also do transcriptions, and subtitles for films. Here is a selection of my recent work:
-            </p>
-
-        </div>
-
-        <div class="translation-container">
-
-            <div class="card full-width-card" style="margin-bottom: 2rem;">
-
-                <span class="card-tag">
-                    Documentary Treatment Translation
-                </span>
-
-                <h3 class="card-title">
-                    Sixth Story
-                </h3>
-
-                <p class="card-desc">
-                    Translation of the treatment of "Sixth Story", a feature documentary directed by Ahmed Abd and produced by Larsa Films.
+            <div class="section-header">
+                <h2 class="section-title">Selected Translation Work</h2>
+                <div class="section-divider"></div>
+                <p class="section-intro">
+                    I translate and copyedit submission dossiers, articles, and literary books, I also do transcriptions, and subtitles for films. Here is a selection of my recent work:
                 </p>
+            </div>
 
-                <div class="link-group">
-                    <a href="https://www.dohafilm.com/en/contents/0c7b314a-16c2-4d15-8eb5-7ec410dde095"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="link-btn">
-                        View on Doha Film Institute (Still in Development) →
-                    </a>
+            <div class="translation-container">
+
+                <div class="card full-width-card">
+                    <span class="card-tag">Documentary Treatment Translation</span>
+                    <h3 class="card-title">Sixth Story</h3>
+                    <p class="card-desc">
+                        Translation of the treatment of "Sixth Story", a feature documentary directed by Ahmed Abd and produced by Larsa Films.
+                    </p>
+                    <div class="link-group">
+                        <a href="https://www.dohafilm.com/en/contents/0c7b314a-16c2-4d15-8eb5-7ec410dde095" target="_blank" rel="noopener noreferrer" class="link-btn">
+                            View on Doha Film Institute (Still in Development) →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card full-width-card">
+                    <span class="card-tag">Literary Translation</span>
+                    <h3 class="card-title">Tarjim Initiative</h3>
+                    <p class="card-desc">
+                        Translated Arabic poetry and fiction into English for the Saudi Ministry of Culture in collaboration with Nomads Publishing London.
+                    </p>
+
+                    <div class="tarjim-grid">
+                        <div class="work-item">
+                            <span class="work-item-author">Shtiwi Al Githi</span>
+                            <a href="https://www.waterstones.com/book/a-tale-of-ancient-whiteness/shtiwi-al-githi/mira-el-hayek/9781914325717" target="_blank" rel="noopener noreferrer" class="article-link">A Tale of Ancient Whiteness</a>
+                        </div>
+                        <div class="work-item">
+                            <span class="work-item-author">Dr. Ahmad Bin Issa Al Hilaly</span>
+                            <a href="https://www.waterstones.com/book/solid-drops/dr-ahmad-bin-issa-al-hilaly/mira-el-hayek/9781914325724" target="_blank" rel="noopener noreferrer" class="article-link">Solid Drops</a>
+                        </div>
+                        <div class="work-item">
+                            <span class="work-item-author">Abdulrahim Farghali</span>
+                            <a href="https://www.waterstones.com/book/dates-and-bullets/abdulrahim-farghali/mira-el-hayek/9781914325786" target="_blank" rel="noopener noreferrer" class="article-link">Dates and Bullets</a>
+                        </div>
+                        <div class="work-item">
+                            <span class="work-item-author">Muhammad Kheder</span>
+                            <a href="https://www.waterstones.com/book/development/muhammad-kheder/mira-el-hayek/9781914325700" target="_blank" rel="noopener noreferrer" class="article-link">Development</a>
+                        </div>
+                        <div class="work-item">
+                            <span class="work-item-author">Awadh Al-Osaimi</span>
+                            <a href="https://www.waterstones.com/book/the-smuggler-and-other-tales/awadh-al-osaimi/mira-el-hayek/9781914325557" target="_blank" rel="noopener noreferrer" class="article-link">The Smuggler and Other Tales</a>
+                        </div>
+                        <div class="work-item">
+                            <span class="work-item-author">Muhammed Ibrahim Yaghob</span>
+                            <a href="https://www.ipgbook.com/a-place-of-forgetfulness-products-9781914325694.php" target="_blank" rel="noopener noreferrer" class="article-link">A Place of Forgetfulness</a>
+                        </div>
+                        <div class="work-item">
+                            <span class="work-item-author">Abdo Khal</span>
+                            <a href="https://www.ipgbook.com/the-cistern-products-9781914325564.php" target="_blank" rel="noopener noreferrer" class="article-link">The Cistern (Songs for Abandoned Nests)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card full-width-card">
+                    <span class="card-tag">Journalism & Features</span>
+                    <h3 class="card-title">L'Orient-Le Jour Translations</h3>
+                    <p class="card-desc">Selected journalistic and essay translations for L'Orient-Le Jour.</p>
+
+                    <div class="lorient-grid">
+                        <div>
+                            <div class="cat-heading">Arabic to English</div>
+                            <div class="work-list">
+                                <div class="work-item">
+                                    <span class="work-item-author">Amani el Hassan</span>
+                                    <a href="https://today.lorientlejour.com/article/1542345/how-the-lack-of-sidewalks-further-isolates-women-in-southern-iraqi-cities.html" target="_blank" rel="noopener noreferrer" class="article-link">How the lack of sidewalks further isolates women in southern Iraqi cities</a>
+                                </div>
+                                <div class="work-item">
+                                    <span class="work-item-author">Badar Salem</span>
+                                    <a href="https://today.lorientlejour.com/article/1540115/gaza-and-the-politics-of-no-future.html" target="_blank" rel="noopener noreferrer" class="article-link">Gaza and the politics of no future</a>
+                                </div>
+                                <div class="work-item">
+                                    <span class="work-item-author">Maya Yaghi</span>
+                                    <a href="https://today.lorientlejour.com/article/1538030/displacement-bags-when-pain-guards-your-sleep.html" target="_blank" rel="noopener noreferrer" class="article-link">Displacement bags: When pain guards your sleep</a>
+                                </div>
+                                <div class="work-item">
+                                    <span class="work-item-author">Khaldoun Al Mallah</span>
+                                    <a href="https://today.lorientlejour.com/article/1503053/the-slug-effect-despair-as-a-mode-of-resistance.html" target="_blank" rel="noopener noreferrer" class="article-link">The Slug Effect: Despair as a mode of resistance</a>
+                                </div>
+                                <div class="work-item">
+                                    <span class="work-item-author">Mohammad Barakat</span>
+                                    <a href="https://today.lorientlejour.com/article/1538448/the-military-fight-against-hezbollah-a-failed-approach.html" target="_blank" rel="noopener noreferrer" class="article-link">The military fight against Hezbollah: A failed approach</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="cat-heading">Arabic to French</div>
+                            <div class="work-list">
+                                <div class="work-item">
+                                    <span class="work-item-author">Badar Salem</span>
+                                    <a href="https://www.lorientlejour.com/article/1540012/gaza-ou-la-politique-de-lavenir-confisque.html" target="_blank" rel="noopener noreferrer" class="article-link">Gaza ou la politique de l'avenir confisqué</a>
+                                </div>
+                                <div class="work-item">
+                                    <span class="work-item-author">Maya Yaghi</span>
+                                    <a href="https://www.lorientlejour.com/article/1537957/les-valises-du-deplacement-quand-la-douleur-veille-sur-nous.html" target="_blank" rel="noopener noreferrer" class="article-link">Les valises du déplacement : quand la douleur veille sur nous</a>
+                                </div>
+                                <div class="work-item">
+                                    <span class="work-item-author">Khaldoun Al Mallah</span>
+                                    <a href="https://www.lorientlejour.com/article/1503036/leffet-limace-le-desespoir-comme-methode-de-resistance.html" target="_blank" rel="noopener noreferrer" class="article-link">L'effet limace : le désespoir comme méthode de resistance</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-
-            <div class="card full-width-card">
-
-                <span class="card-tag">
-                    Literary Translation
-                </span>
-
-                <h3 class="card-title">
-                    Tarjim Initiative
-                </h3>
-
-                <p class="card-desc">
-                    Translated Arabic poetry and fiction into English for the Saudi Ministry of Culture in collaboration with Nomads Publishing London.
-                </p>
-
-                <div class="tarjim-grid">
-
-                    <div class="work-item">
-                        <span class="work-item-author">Shtiwi Al Githi</span>
-                        <a href="https://www.waterstones.com/book/a-tale-of-ancient-whiteness/shtiwi-al-githi/mira-el-hayek/9781914325717"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="article-link">
-                            A Tale of Ancient Whiteness
-                        </a>
-                    </div>
-
-                    <div class="work-item">
-                        <span class="work-item-author">Dr. Ahmad Bin Issa Al Hilaly</span>
-                        <a href="https://www.waterstones.com/book/solid-drops/dr-ahmad-bin-issa-al-hilaly/mira-el-hayek/9781914325724"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="article-link">
-                            Solid Drops
-                        </a>
-                    </div>
-
-                    <div class="work-item">
-                        <span class="work-item-author">Abdulrahim Farghali</span>
-                        <a href="https://www.waterstones.com/book/dates-and-bullets/abdulrahim-farghali/mira-el-hayek/9781914325786"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="article-link">
-                            Dates and Bullets
-                        </a>
-                    </div>
-
-                    <div class="work-item">
-                        <span class="work-item-author">Muhammad Kheder</span>
-                        <a href="https://www.waterstones.com/book/development/muhammad-kheder/mira-el-hayek/9781914325700"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="article-link">
-                            Development
-                        </a>
-                    </div>
-
-                    <div class="work-item">
-                        <span class="work-item-author">Awadh Al-Osaimi</span>
-                        <a href="https://www.waterstones.com/book/the-smuggler-and-other-tales/awadh-al-osaimi/mira-el-hayek/9781914325557"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="article-link">
-                            The Smuggler and Other Tales
-                        </a>
-                    </div>
-
-                    <div class="work-item">
-                        <span class="work-item-author">Muhammed Ibrahim Yaghob</span>
-                        <a href="https://www.ipgbook.com/a-place-of-forgetfulness-products-9781914325694.php"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="article-link">
-                            A Place of Forgetfulness
-                        </a>
-                    </div>
-
-                    <div class="work-item">
-                        <span class="work-item-author">Abdo Khal</span>
-                        <a href="https://www.ipgbook.com/the-cistern-products-9781914325564.php"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="article-link">
-                            The Cistern (Songs for Abandoned Nests)
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- L'ORIENT LE JOUR -->
-            <div class="card full-width-card">
-
-                <span class="card-tag">
-                    Journalism & Features
-                </span>
-
-                <h3 class="card-title">
-                    L'Orient-Le Jour Translations
-                </h3>
-
-                <p class="card-desc">
-                    Selected journalistic and essay translations for L'Orient-Le Jour.
-                </p>
-
-                <div class="lorient-grid">
-
-                    <div>
-
-                        <div class="cat-heading">
-                            Arabic to English
-                        </div>
-
-                        <div class="work-list">
-
-                            <div class="work-item">
-                                <span class="work-item-author">Amani el Hassan</span>
-                                <a href="https://today.lorientlejour.com/article/1542345/how-the-lack-of-sidewalks-further-isolates-women-in-southern-iraqi-cities.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    How the lack of sidewalks further isolates women in southern Iraqi cities
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Badar Salem</span>
-                                <a href="https://today.lorientlejour.com/article/1540115/gaza-and-the-politics-of-no-future.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    Gaza and the politics of no future
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Maya Yaghi</span>
-                                <a href="https://today.lorientlejour.com/article/1538030/displacement-bags-when-pain-guards-your-sleep.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    Displacement bags: When pain guards your sleep
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Khaldoun Al Mallah</span>
-                                <a href="https://today.lorientlejour.com/article/1503053/the-slug-effect-despair-as-a-mode-of-resistance.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    The Slug Effect: Despair as a mode of resistance
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Mohammad Barakat</span>
-                                <a href="https://today.lorientlejour.com/article/1538448/the-military-fight-against-hezbollah-a-failed-approach.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    The military fight against Hezbollah: A failed approach
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Hazem Saghieh</span>
-                                <a href="https://today.lorientlejour.com/article/1498712/hezbollah-and-us-chronicle-of-a-deadly-illusion.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    Hezbollah and Us: Chronicle of a deadly illusion
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Suhaib Ayoub</span>
-                                <a href="https://today.lorientlejour.com/article/1506976/a-night-of-feverish-kisses.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    A night of feverish kisses
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Wissam Lahham</span>
-                                <a href="https://today.lorientlejour.com/article/1507592/what-is-the-point-of-a-territory-lebanons-constitutional-borders.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    What is the point of a territory? Lebanon's constitutional borders
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Ahmad Abdelhalim</span>
-                                <a href="https://today.lorientlejour.com/article/1537280/the-ordeals-of-the-egyptian-dody-on-imprisonment-exile-and-death.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    The ordeals of the Egyptian body: On imprisonment, exile, and death
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Najwa Barakat</span>
-                                <a href="https://today.lorientlejour.com/article/1503054/coexistence-between-fragility-and-clashing-narratives.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    Coexistence in Lebanon: Between fragility and clashing narratives
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div>
-
-                        <div class="cat-heading">
-                            Arabic to French
-                        </div>
-
-                        <div class="work-list">
-
-                            <div class="work-item">
-                                <span class="work-item-author">Badar Salem</span>
-                                <a href="https://www.lorientlejour.com/article/1540012/gaza-ou-la-politique-de-lavenir-confisque.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    Gaza ou la politique de l'avenir confisqué
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Maya Yaghi</span>
-                                <a href="https://www.lorientlejour.com/article/1537957/les-valises-du-deplacement-quand-la-douleur-veille-sur-nous.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    Les valises du déplacement : quand la douleur veille sur nous
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Khaldoun Al Mallah</span>
-                                <a href="https://www.lorientlejour.com/article/1503036/leffet-limace-le-desespoir-comme-methode-de-resistance.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    L'effet limace : le désespoir comme méthode de resistance
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Suhaib Ayoub</span>
-                                <a href="https://www.lorientlejour.com/article/1506996/-netaient-ils-pas-le-voyage-lui-meme-.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    N'étaient-ils pas le voyage lui-même ?
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Wissam Lahham</span>
-                                <a href="https://www.lorientlejour.com/article/1507548/a-quoi-bon-un-territoire-les-frontieres-libanaises-dans-la-constitution.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    À quoi bon un territoire ? Les frontières libanaises dans la Constitution
-                                </a>
-                            </div>
-
-                            <div class="work-item">
-                                <span class="work-item-author">Najwa Barakat</span>
-                                <a href="https://www.lorientlejour.com/article/1503026/le-vivre-ensemble-entre-fragilite-et-recits-antagonistes.html"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="article-link">
-                                    Le vivre-ensemble, entre fragilité et récits antagonistes
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
         </div>
     </div>
 
     <!-- TRANSCRIPTION & SUBTITLES -->
     <div id="subtitles" class="page-content">
+        <div class="subpage-inner">
 
-        <div class="section-header">
-
-            <h2 class="section-title">
-                Transcription & Subtitles
-            </h2>
-
-            <div class="section-divider"></div>
-
-            <p class="section-intro">
-                Professional transcription, post-production subtitle creation, and translation for feature films, documentaries, and investigative podcasts.
-            </p>
-
-        </div>
-
-        <div class="grid">
-
-            <div class="card">
-
-                <div>
-                    <span class="card-tag">
-                        Feature Documentary
-                    </span>
-
-                    <h3 class="card-title">
-                        Flana
-                    </h3>
-
-                    <p class="card-desc">
-                        French-Iraqi co-production directed by Zahraa Ghandour. Handled transcription, translation and subtitle creation in both English and French.
-                    </p>
-                </div>
-
-                <div class="link-group">
-
-                    <a href="https://www.imdb.com/title/tt37815968/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="link-btn">
-                        View on IMDb →
-                    </a>
-
-                    <a href="https://www.youtube.com/watch?v=CL0fhT4SfqE"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="link-btn">
-                        Watch Trailer →
-                    </a>
-
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">Transcription & Subtitles</h2>
+                <div class="section-divider"></div>
+                <p class="section-intro">
+                    Professional transcription, post-production subtitle creation, and translation for feature films, documentaries, and investigative podcasts.
+                </p>
             </div>
 
-            <div class="card">
+            <div class="grid">
 
-                <div>
-                    <span class="card-tag">
-                        Feature Documentary
-                    </span>
-
-                    <h3 class="card-title">
-                        #FollowMe
-                    </h3>
-
-                    <p class="card-desc">
-                        Feature documentary directed by Anna Bruun Nørager and produced by Toolbox Film. Handled professional English subtitling work.
-                    </p>
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Feature Documentary</span>
+                        <h3 class="card-title">Flana</h3>
+                        <p class="card-desc">
+                            French-Iraqi co-production directed by Zahraa Ghandour. Handled transcription, translation and subtitle creation in both English and French.
+                        </p>
+                    </div>
+                    <div class="link-group">
+                        <a href="https://www.imdb.com/title/tt37815968/" target="_blank" rel="noopener noreferrer" class="link-btn">View on IMDb →</a>
+                        <a href="https://www.youtube.com/watch?v=CL0fhT4SfqE" target="_blank" rel="noopener noreferrer" class="link-btn">Watch Trailer →</a>
+                    </div>
                 </div>
 
-                <div class="link-group">
-
-                    <a href="https://www.imdb.com/title/tt13222912/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="link-btn">
-                        View on IMDb →
-                    </a>
-
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Feature Documentary</span>
+                        <h3 class="card-title">#FollowMe</h3>
+                        <p class="card-desc">
+                            Feature documentary directed by Anna Bruun Nørager and produced by Toolbox Film. Handled professional English subtitling work.
+                        </p>
+                    </div>
+                    <div class="link-group">
+                        <a href="https://www.imdb.com/title/tt13222912/" target="_blank" rel="noopener noreferrer" class="link-btn">View on IMDb →</a>
+                    </div>
                 </div>
+
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Investigative Audio</span>
+                        <h3 class="card-title">Lebanon Heist Podcast</h3>
+                        <p class="card-desc">
+                            Transcribed and edited interview content for Kerning Cultures' acclaimed narrative podcast series.
+                        </p>
+                    </div>
+                    <div class="link-group">
+                        <a href="https://kerningcultures.com/kerning-cultures-to-launch-the-lebanon-heist-this-summer/" target="_blank" rel="noopener noreferrer" class="link-btn">Listen / Read Announcement →</a>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="card">
-
-                <div>
-                    <span class="card-tag">
-                        Documentary Film
-                    </span>
-
-                    <h3 class="card-title">
-                        La Fille au Pied d'Argent
-                    </h3>
-
-                    <p class="card-desc">
-                        Documentary directed by Zahraa Ghandour, produced by the French Institute in Baghdad. Handled transcription, translation and professional subtitling in French and English.
-                    </p>
-                </div>
-
-                <div class="link-group">
-
-                    <a href="https://bagdad.institutfrancais-irak.com/La-fille-au-pied-d-argent-De-Zahraa-Ghandour"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="link-btn">
-                        View on French Institute Baghdad →
-                    </a>
-
-                </div>
-            </div>
-
-            <div class="card">
-
-                <div>
-                    <span class="card-tag">
-                        Investigative Audio
-                    </span>
-
-                    <h3 class="card-title">
-                        Lebanon Heist Podcast
-                    </h3>
-
-                    <p class="card-desc">
-                        Transcribed and edited interview content for Kerning Cultures' acclaimed narrative podcast series.
-                    </p>
-                </div>
-
-                <div class="link-group">
-
-                    <a href="https://kerningcultures.com/kerning-cultures-to-launch-the-lebanon-heist-this-summer/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="link-btn">
-                        Listen / Read Announcement →
-                    </a>
-
-                </div>
-            </div>
-
         </div>
     </div>
 
     <!-- AWARDS -->
     <div id="awards" class="page-content">
+        <div class="subpage-inner">
 
-        <div class="section-header">
+            <div class="section-header">
+                <h2 class="section-title">Honors & Awards</h2>
+                <div class="section-divider"></div>
+            </div>
 
-            <h2 class="section-title">
-                Honors & Awards
-            </h2>
+            <div class="grid">
 
-            <div class="section-divider"></div>
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Journalism Excellence</span>
+                        <h3 class="card-title">Samir Kassir Award for Freedom of Press</h3>
+                        <p class="card-desc">
+                            Nominated Finalist (2019) for exceptional journalistic integrity and commitment to freedom of expression.
+                        </p>
+                    </div>
+                </div>
 
-        </div>
-
-        <div class="grid">
-
-            <div class="card">
-
-                <div>
-
-                    <span class="card-tag">
-                        Journalism Excellence
-                    </span>
-
-                    <h3 class="card-title">
-                        Samir Kassir Award for Freedom of Press
-                    </h3>
-
-                    <p class="card-desc">
-                        Nominated Finalist (2019) for exceptional journalistic integrity and commitment to freedom of expression.
-                    </p>
-
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Creative Recognition</span>
+                        <h3 class="card-title">Deutsche Bank Creative Awards</h3>
+                        <p class="card-desc">Winner (2012).</p>
+                    </div>
                 </div>
 
             </div>
-
-            <div class="card">
-
-                <div>
-
-                    <span class="card-tag">
-                        Creative Recognition
-                    </span>
-
-                    <h3 class="card-title">
-                        Deutsche Bank Creative Awards
-                    </h3>
-
-                    <p class="card-desc">
-                        Winner (2012).
-                    </p>
-
-                </div>
-
-            </div>
-
         </div>
     </div>
 
     <!-- CONTACT -->
     <div id="contact" class="page-content" style="text-align: center;">
+        <div class="subpage-inner">
 
-        <div class="section-header">
-
-            <h2 class="section-title">
-                Get In Touch
-            </h2>
-
-            <div class="section-divider"></div>
-
-        </div>
-
-        <p style="color: var(--text-muted); font-size: 1.15rem; margin-bottom: 2rem; max-width: 650px; margin-left: auto; margin-right: auto;">
-            Currently taking on select projects in video editing, post-production management, and literary translation. Let's collaborate.
-        </p>
-
-        <div class="contact-container">
-
-            <div class="btn-row">
-
-                <a href="mailto:elhayekmira@gmail.com"
-                   class="btn btn-primary">
-                    Email Me
-                </a>
-
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-divider"></div>
+                <p style="color: var(--text-muted); font-size: 1.05rem; margin-top: 1rem;">
+                    Currently taking on select projects, let's collaborate.
+                </p>
             </div>
 
-            <div class="btn-row">
+            <div class="contact-container">
+                <div class="btn-row">
+                    <a href="mailto:elhayekmira@gmail.com" class="btn">Email Me</a>
+                </div>
 
-                <a href="https://wa.me/96170266883"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="btn">
-                    WhatsApp
-                </a>
-
-                <a href="https://www.linkedin.com/in/mirahayek/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="btn">
-                    LinkedIn
-                </a>
-
+                <div class="btn-row">
+                    <a href="https://wa.me/96170266883" target="_blank" rel="noopener noreferrer" class="btn">WhatsApp</a>
+                    <a href="https://www.linkedin.com/in/mirahayek/" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
+                </div>
             </div>
 
         </div>
-
     </div>
 
     <!-- FOOTER -->
@@ -1479,36 +882,22 @@
 
     <!-- JAVASCRIPT -->
     <script>
-
         function showPage(pageId, element) {
-
             const pages = document.querySelectorAll('.page-content');
-
-            pages.forEach(page => {
-                page.classList.remove('active');
-            });
+            pages.forEach(page => page.classList.remove('active'));
 
             const navLinks = document.querySelectorAll('.nav-link');
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-            });
+            navLinks.forEach(link => link.classList.remove('active'));
 
             document.getElementById(pageId).classList.add('active');
 
             if (element) {
                 element.classList.add('active');
             } else {
-
                 navLinks.forEach(link => {
-
-                    if (
-                        link.getAttribute('onclick') &&
-                        link.getAttribute('onclick').includes(pageId)
-                    ) {
+                    if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(pageId)) {
                         link.classList.add('active');
                     }
-
                 });
             }
 
@@ -1517,7 +906,6 @@
                 behavior: 'smooth'
             });
         }
-
     </script>
 
 </body>
