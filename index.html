@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Mira El Hayek | Portfolio</title>
 
-    <link rel="icon" type="image/svg+xml" href="/m.svg?v=10">
-    <link rel="mask-icon" href="/m.svg?v=10" color="#f0b839">
-    <link rel="icon" type="image/png" sizes="32x32" href="/m.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/m.png">
-    <link rel="shortcut icon" href="/m.png">
+    <!-- FAVICON ICON (SAFARI & SERVER FALLBACKS) -->
+    <link rel="icon" type="image/svg+xml" href="m.svg?v=3">
+    <link rel="mask-icon" href="m.svg?v=3" color="#f0b839">
+    <link rel="apple-touch-icon" sizes="180x180" href="m.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="m.png">
+    <link rel="shortcut icon" href="m.svg?v=3">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- GOOGLE ANALYTICS (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YR6EHK22J0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YR6EHK22J0');
+    </script>
 
     <style>
         :root {
@@ -540,6 +551,7 @@
 
 <body>
 
+    <!-- NAVIGATION -->
     <nav>
         <div class="nav-links">
             <span class="nav-link active" onclick="showPage('home', this)">Home</span>
@@ -551,6 +563,7 @@
         </div>
     </nav>
 
+    <!-- HOME -->
     <div id="home" class="page-content active" style="padding: 0; max-width: 100%;">
         <section class="home-section">
 
@@ -587,6 +600,7 @@
         </section>
     </div>
 
+    <!-- MEDIA WORK -->
     <div id="media" class="page-content">
         <div class="subpage-inner">
 
@@ -650,6 +664,7 @@
         </div>
     </div>
 
+    <!-- TRANSLATION -->
     <div id="translation" class="page-content">
         <div class="subpage-inner">
 
@@ -771,6 +786,7 @@
         </div>
     </div>
 
+    <!-- TRANSCRIPTION & SUBTITLES -->
     <div id="subtitles" class="page-content">
         <div class="subpage-inner">
 
@@ -828,6 +844,7 @@
         </div>
     </div>
 
+    <!-- AWARDS -->
     <div id="awards" class="page-content">
         <div class="subpage-inner">
 
@@ -860,6 +877,7 @@
         </div>
     </div>
 
+    <!-- CONTACT -->
     <div id="contact" class="page-content" style="text-align: center;">
         <div class="subpage-inner">
 
@@ -885,10 +903,12 @@
         </div>
     </div>
 
+    <!-- FOOTER -->
     <footer>
         <p>© Mira El Hayek</p>
     </footer>
 
+    <!-- JAVASCRIPT -->
     <script>
         function showPage(pageId, element) {
             const pages = document.querySelectorAll('.page-content');
@@ -913,6 +933,14 @@
                 top: 0,
                 behavior: 'smooth'
             });
+
+            // TRACKING SINGLE-PAGE APPLICATION (SPA) PAGEVIEWS
+            if (typeof gtag === 'function') {
+                gtag('event', 'page_view', {
+                    page_path: '/' + (pageId === 'home' ? '' : pageId),
+                    page_title: pageId.charAt(0).toUpperCase() + pageId.slice(1)
+                });
+            }
         }
     </script>
 
