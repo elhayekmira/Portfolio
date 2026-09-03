@@ -3,7 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Mira El Hayek | Portfolio</title>
+    
+    <!-- Primary SEO Metadata -->
+    <title>Mira El Hayek | Producer, Video Editor & Published Translator</title>
+    <meta name="description" content="Official portfolio of Mira El Hayek — Producer, Video Editor, and Published Translator with over 15 years of experience in broadcast networks, independent films, and publishing houses.">
+    <meta name="keywords" content="Mira El Hayek, Mira El-Hayek, Producer, Video Editor, Published Translator, Post-Production, Literary Translation, Arabic Translation, Subtitles">
+    <meta name="author" content="Mira El Hayek">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.miraelhayek.com/">
+
+    <!-- Open Graph / Social Media Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.miraelhayek.com/">
+    <meta property="og:title" content="Mira El Hayek | Producer, Video Editor & Published Translator">
+    <meta property="og:description" content="Official portfolio of Mira El Hayek showcasing video production, post-production management, editing, and published literary translations.">
+    <meta property="og:image" content="https://www.miraelhayek.com/m.png">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mira El Hayek | Producer, Video Editor & Published Translator">
+    <meta name="twitter:description" content="Official portfolio of Mira El Hayek showcasing video production, post-production management, editing, and published literary translations.">
+    <meta name="twitter:image" content="https://www.miraelhayek.com/m.png">
+
+    <!-- Structured Data / JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mira El Hayek",
+      "alternateName": ["Mira El-Hayek", "Mira Hayek"],
+      "jobTitle": "Producer, Video Editor, Published Translator",
+      "url": "https://www.miraelhayek.com/",
+      "sameAs": [
+        "https://www.linkedin.com/in/mirahayek/",
+        "https://www.imdb.com/title/tt37815968/"
+      ],
+      "knowsLanguage": ["English", "Arabic", "French"]
+    }
+    </script>
 
     <!-- FAVICON ICON (SAFARI & SERVER FALLBACKS) -->
     <link rel="icon" type="image/svg+xml" href="m.svg?v=3">
@@ -15,16 +52,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- GOOGLE ANALYTICS (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YR6EHK22J0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-YR6EHK22J0');
-    </script>
 
     <style>
         :root {
@@ -572,11 +599,11 @@
                 <h1 class="hero-title">Mira El Hayek</h1>
 
                 <p class="hero-role">
-                    Producer • Video Editor • Translator
+                    Producer • Video Editor • Published Translator
                 </p>
 
                 <p class="about-text">
-                    With over 15 years of experience in media, I specialize in end-to-end video production, post-production management, video editing, and literary translation across international broadcast networks, independent films, and leading publishing houses.
+                    With over 15 years of experience in media, I specialize in end-to-end video production, post-production management, video editing, and published literary translation across international broadcast networks, independent films, and leading publishing houses.
                 </p>
 
                 <div class="clients-section">
@@ -586,12 +613,12 @@
                     </span>
 
                     <div class="client-logos-wrapper">
-                        <img src="bbc.png" alt="BBC">
-                        <img src="nos.png" alt="NOS Nieuws">
-                        <img src="aljazeera.png" alt="Al Jazeera">
-                        <img src="Al-Araby tv.png" alt="Al-Araby TV">
-                        <img src="l'orient le jour.png" alt="L'Orient Le Jour">
-                        <img src="saudi moinistry of culture.png" alt="Saudi Ministry of Culture">
+                        <img src="bbc.png" alt="BBC News logo">
+                        <img src="nos.png" alt="NOS Nieuws logo">
+                        <img src="aljazeera.png" alt="Al Jazeera logo">
+                        <img src="Al-Araby tv.png" alt="Al-Araby TV logo">
+                        <img src="l'orient le jour.png" alt="L'Orient-Le Jour logo">
+                        <img src="saudi moinistry of culture.png" alt="Saudi Ministry of Culture logo">
                     </div>
 
                 </div>
@@ -672,7 +699,7 @@
                 <h2 class="section-title">Selected Translation Work</h2>
                 <div class="section-divider"></div>
                 <p class="section-intro">
-                    I translate and copyedit submission dossiers, articles, and literary books, I also do transcriptions, and subtitles for films. Here is a selection of my recent work:
+                    As a published translator, I translate and copyedit submission dossiers, articles, and literary books. I also provide transcriptions and subtitles for films. Here is a selection of my recent work:
                 </p>
             </div>
 
@@ -933,14 +960,6 @@
                 top: 0,
                 behavior: 'smooth'
             });
-
-            // TRACKING SINGLE-PAGE APPLICATION (SPA) PAGEVIEWS
-            if (typeof gtag === 'function') {
-                gtag('event', 'page_view', {
-                    page_path: '/' + (pageId === 'home' ? '' : pageId),
-                    page_title: pageId.charAt(0).toUpperCase() + pageId.slice(1)
-                });
-            }
         }
     </script>
 
