@@ -1,967 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    
-    <!-- Primary SEO Metadata -->
-    <title>Mira El Hayek | Producer, Video Editor & Published Translator</title>
-    <meta name="description" content="Official portfolio of Mira El Hayek — Producer, Video Editor, and Published Translator with over 15 years of experience in broadcast networks, independent films, and publishing houses.">
-    <meta name="keywords" content="Mira El Hayek, Mira El-Hayek, Producer, Video Editor, Published Translator, Post-Production, Literary Translation, Arabic Translation, Subtitles">
-    <meta name="author" content="Mira El Hayek">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.elhayekmira.com/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mira El Hayek | Media Producer, Video Editor & Literary Translator</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <!-- Open Graph / Social Media Metadata -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.elhayekmira.com/">
-    <meta property="og:title" content="Mira El Hayek | Producer, Video Editor & Published Translator">
-    <meta property="og:description" content="Official portfolio of Mira El Hayek showcasing video production, post-production management, editing, and published literary translations.">
-    <meta property="og:image" content="https://www.elhayekmira.com/m.png">
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
-    <!-- Twitter Card Metadata -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mira El Hayek | Producer, Video Editor & Published Translator">
-    <meta name="twitter:description" content="Official portfolio of Mira El Hayek showcasing video production, post-production management, editing, and published literary translations.">
-    <meta name="twitter:image" content="https://www.elhayekmira.com/m.png">
+  <link rel="canonical" href="https://elhayekmira.com/">
+  <meta name="description" content="Portfolio of Mira El Hayek, video editor, post-production manager, and literary translator with over 15 years of experience in broadcast media and publishing.">
 
-    <!-- Structured Data / JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Mira El Hayek",
-      "alternateName": ["Mira El-Hayek", "Mira Hayek"],
-      "jobTitle": "Producer, Video Editor, Published Translator",
-      "url": "https://www.elhayekmira.com/",
-      "sameAs": [
-        "https://www.linkedin.com/in/mirahayek/",
-        "https://www.imdb.com/title/tt37815968/"
-      ],
-      "knowsLanguage": ["English", "Arabic", "French"]
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mira El Hayek | Media Producer & Literary Translator">
+  <meta property="og:description" content="Over 15 years of experience in end-to-end video production, post-production management, and literary translation.">
+  <meta property="og:url" content="https://elhayekmira.com/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mira El Hayek",
+    "alternateName": ["Mira El-Hayek", "Mira Hayek"],
+    "jobTitle": "Producer, Video Editor, Published Translator",
+    "url": "https://elhayekmira.com/",
+    "sameAs": [
+      "https://www.linkedin.com/in/mirahayek/",
+      "https://www.imdb.com/title/tt37815968/"
+    ],
+    "knowsLanguage": ["English", "Arabic", "French"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-color: #fcfcfc;
+      --text-color: #222222;
+      --accent-color: #0056b3;
+      --card-bg: #ffffff;
+      --border-color: #e5e5e5;
     }
-    </script>
 
-    <!-- FAVICON ICON (SAFARI & SERVER FALLBACKS) -->
-    <link rel="icon" type="image/svg+xml" href="m.svg?v=3">
-    <link rel="mask-icon" href="m.svg?v=3" color="#f0b839">
-    <link rel="apple-touch-icon" sizes="180x180" href="m.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="m.png">
-    <link rel="shortcut icon" href="m.svg?v=3">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --accent-ochre: #f0b839;
-            --accent-ochre-hover: #d69f26;
-            --card-glass: rgba(30, 24, 18, 0.55);
-            --card-glass-hover: rgba(42, 33, 24, 0.72);
-            --border-glass: rgba(255, 255, 255, 0.18);
-            --text-bright: #ffffff;
-            --text-muted: #e6ded6;
-            
-            /* Unified Warm Amber Button Color */
-            --btn-warm: #d99b26;
-            --btn-warm-hover: #be841b;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('clothesline.jpg') center center / cover no-repeat fixed;
-            color: var(--text-bright);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, .hero-title {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* NAVIGATION */
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 1.2rem 8%;
-            background: rgba(18, 14, 10, 0.75);
-            color: #f7f1e5;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: color 0.25s ease;
-            padding: 0.2rem 0;
-            background: transparent !important;
-            border-radius: 0 !important;
-            box-shadow: none !important;
-            white-space: nowrap;
-        }
-
-        .nav-link:hover {
-            color: var(--accent-ochre);
-            background: transparent !important;
-        }
-
-        .nav-link.active {
-            color: var(--accent-ochre);
-            background: transparent !important;
-            box-shadow: none !important;
-            border-bottom: 2px solid var(--accent-ochre);
-        }
-
-        /* HOME SECTION */
-        .home-section {
-            min-height: 100vh;
-            min-height: 100svh;
-            padding: 8rem 8% 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 880px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: var(--card-glass);
-            padding: 3.5rem 2.5rem;
-            border-radius: 20px;
-            border: 1px solid var(--border-glass);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-        }
-
-        .hero-title {
-            font-size: 3.8rem;
-            font-weight: 700;
-            line-height: 1.05;
-            margin-top: 0;
-            margin-bottom: 0.75rem;
-            color: #ffffff;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-role {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--accent-ochre);
-            margin-bottom: 1.2rem;
-            letter-spacing: 0.5px;
-            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            color: #ffffff;
-            line-height: 1.8;
-            max-width: 720px;
-            margin-top: 0.5rem;
-            font-weight: 500;
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-        }
-
-        .clients-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.2rem;
-            margin-top: 2.5rem;
-            width: 100%;
-        }
-
-        .trusted-label {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent-ochre);
-            font-weight: 700;
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-        }
-
-        .client-logos-wrapper {
-            display: flex;
-            gap: 2.5rem;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            width: 100%;
-        }
-
-        .client-logos-wrapper img {
-            height: 40px;
-            max-width: 140px;
-            width: auto;
-            object-fit: contain;
-            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
-            opacity: 0.95;
-            transition: transform 0.25s ease, opacity 0.25s ease;
-        }
-
-        .client-logos-wrapper img:hover {
-            transform: scale(1.08);
-            opacity: 1;
-        }
-
-        /* SUBPAGES (HEAVILY BLURRED BACKGROUND) */
-        .page-content {
-            display: none;
-            padding: 7.5rem 8% 5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
-            width: 100%;
-            position: relative;
-        }
-
-        .page-content.active {
-            display: block;
-        }
-
-        .page-content:not(#home) {
-            backdrop-filter: blur(45px) brightness(0.85);
-            -webkit-backdrop-filter: blur(45px) brightness(0.85);
-            background: rgba(22, 17, 13, 0.45);
-            max-width: 100%;
-            padding-left: 8%;
-            padding-right: 8%;
-        }
-
-        .subpage-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3.5rem;
-            background: var(--card-glass);
-            padding: 2.5rem 2rem;
-            border-radius: 20px;
-            border: 1px solid var(--border-glass);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-        }
-
-        .section-intro {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            max-width: 720px;
-            margin: 0.75rem auto 0;
-            line-height: 1.7;
-            font-weight: 500;
-        }
-
-        .section-divider {
-            width: 50px;
-            height: 3px;
-            background: var(--accent-ochre);
-            margin: 0 auto;
-        }
-
-        /* GRIDS & CARDS */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            align-items: start;
-        }
-
-        .translation-container {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .full-width-card {
-            width: 100%;
-        }
-
-        .lorient-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-            margin-top: 1rem;
-        }
-
-        .tarjim-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.25rem 2.5rem;
-            margin-top: 1rem;
-        }
-
-        .card {
-            background: var(--card-glass);
-            border-radius: 18px;
-            border: 1px solid var(--border-glass);
-            padding: 2.25rem;
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            background: var(--card-glass-hover);
-            border-color: rgba(240, 184, 57, 0.5);
-            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
-        }
-
-        .card-tag {
-            color: var(--accent-ochre);
-            font-size: 0.95rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        .card-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 0.5rem 0 0.5rem;
-            color: #ffffff;
-        }
-
-        .card-desc {
-            color: var(--text-muted);
-            font-size: 0.98rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .cat-heading {
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--accent-ochre);
-            margin-bottom: 0.75rem;
-            padding-bottom: 0.35rem;
-            border-bottom: 1px solid var(--border-glass);
-        }
-
-        .work-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .work-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .work-item-author {
-            font-size: 0.88rem;
-            font-weight: 700;
-            color: var(--accent-ochre);
-        }
-
-        .article-link {
-            color: var(--text-bright);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        .article-link:hover {
-            color: var(--accent-ochre);
-            text-decoration: underline;
-        }
-
-        .link-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin-top: auto;
-        }
-
-        .link-btn {
-            color: var(--accent-ochre);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.92rem;
-            transition: opacity 0.2s ease;
-        }
-
-        .link-btn:hover {
-            text-decoration: underline;
-            opacity: 0.85;
-        }
-
-        /* CONTACT & UNIFIED WARM BUTTONS */
-        .contact-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-            align-items: center;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-
-        .btn-row {
-            display: flex;
-            gap: 1.25rem;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            width: 100%;
-            max-width: 480px;
-        }
-
-        .btn {
-            padding: 0.95rem 2rem;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 1rem;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex: 1;
-            min-width: 200px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-            background: var(--btn-warm);
-            color: #ffffff;
-            border: 1px solid var(--btn-warm);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            background: var(--btn-warm-hover);
-            border-color: var(--btn-warm-hover);
-            color: #ffffff;
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 2.5rem 0;
-            background: rgba(14, 11, 8, 0.85);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-top: auto;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-
-        /* MOBILE RESPONSIVENESS */
-        @media (max-width: 900px) {
-            .lorient-grid, .tarjim-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                justify-content: center;
-                padding: 0.8rem 4%;
-            }
-
-            .nav-links {
-                width: 100%;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 0.35rem 0.5rem;
-                justify-items: center;
-            }
-
-            .nav-link {
-                font-size: 0.76rem;
-            }
-
-            .home-section {
-                padding: 8rem 4% 3rem;
-            }
-
-            .hero-content {
-                padding: 2rem 1.2rem;
-            }
-
-            .hero-title {
-                font-size: 2.6rem;
-            }
-
-            .client-logos-wrapper img {
-                height: 28px;
-                max-width: 110px;
-            }
-
-            .page-content {
-                padding: 7rem 5% 3rem;
-            }
-
-            .page-content:not(#home) {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-
-            .section-header {
-                padding: 2rem 1.2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-            }
-
-            .btn-row {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
-        }
-    </style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #555555;
+      margin-top: 0;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      max-width: 900px;
+      margin: 40px auto 20px;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid var(--border-color);
+      color: #777777;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
-
 <body>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="nav-links">
-            <span class="nav-link active" onclick="showPage('home', this)">Home</span>
-            <span class="nav-link" onclick="showPage('media', this)">Media Work</span>
-            <span class="nav-link" onclick="showPage('translation', this)">Translation Work</span>
-            <span class="nav-link" onclick="showPage('subtitles', this)">Transcription & Subtitles</span>
-            <span class="nav-link" onclick="showPage('awards', this)">Awards</span>
-            <span class="nav-link" onclick="showPage('contact', this)">Contact</span>
+  <header>
+    <h1>Mira El Hayek</h1>
+    <p class="subtitle">Media Producer • Video Editor • Literary Translator</p>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Media professional, video editor, post-production manager, and literary translator with over 15 years of experience across broadcast networks, independent films, and publishing houses.</p>
+    </section>
+
+    <section id="media-work">
+      <h2>Broadcast & Video Production</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>BBC Xtra</h3>
+          <p>Weekly magazine show editing and post-production management.</p>
         </div>
-    </nav>
-
-    <!-- HOME -->
-    <div id="home" class="page-content active" style="padding: 0; max-width: 100%;">
-        <section class="home-section">
-
-            <div class="hero-content">
-
-                <h1 class="hero-title">Mira El Hayek</h1>
-
-                <p class="hero-role">
-                    Producer • Video Editor • Published Translator
-                </p>
-
-                <p class="about-text">
-                    With over 15 years of experience in media, I specialize in end-to-end video production, post-production management, video editing, and published literary translation across international broadcast networks, independent films, and leading publishing houses.
-                </p>
-
-                <div class="clients-section">
-
-                    <span class="trusted-label">
-                        Trusted by:
-                    </span>
-
-                    <div class="client-logos-wrapper">
-                        <img src="bbc.png" alt="BBC News logo">
-                        <img src="nos.png" alt="NOS Nieuws logo">
-                        <img src="aljazeera.png" alt="Al Jazeera logo">
-                        <img src="Al-Araby tv.png" alt="Al-Araby TV logo">
-                        <img src="l'orient le jour.png" alt="L'Orient-Le Jour logo">
-                        <img src="saudi moinistry of culture.png" alt="Saudi Ministry of Culture logo">
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
-    </div>
-
-    <!-- MEDIA WORK -->
-    <div id="media" class="page-content">
-        <div class="subpage-inner">
-
-            <div class="section-header">
-                <h2 class="section-title">Selected Media Work</h2>
-                <div class="section-divider"></div>
-                <p class="section-intro">
-                    I started my journey in media as an editor for Al Sumaria TV, then moved to the BBC before starting my freelance journey collaborating with major international names like Al Jazeera and NOS Nieuws, as well as independent filmmakers. Here is a selection of my recent work:
-                </p>
-            </div>
-
-            <div class="grid">
-
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Post-Production & Editing</span>
-                        <h3 class="card-title">Chex Stadium</h3>
-                        <p class="card-desc">
-                            Spearheaded the post-production editing and creative development of "Chex Stadium" for Al Jazeera O2.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Broadcast Series</span>
-                        <h3 class="card-title">Ma Khtalafna Series</h3>
-                        <p class="card-desc">
-                            Post-production coordinator for Al Araby TV / Fadaat Media Qatar, managing editing schedules, sound design, and final delivery.
-                        </p>
-                    </div>
-                    <div class="link-group">
-                        <a href="https://www.alarabyplus.com/ar/shows/ma-ikhtalafna" target="_blank" rel="noopener noreferrer" class="link-btn">
-                            Watch on Al Araby Plus →
-                        </a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Broadcast & Digital Journalism</span>
-                        <h3 class="card-title">BBC</h3>
-                        <p class="card-desc">
-                            Edited TV programs between 2018 and 2020 (BBC Xtra, Dunyana, The Scene), as well as producing digital stories after 2020, all adhering to international media standards across broadcast and digital platforms.
-                        </p>
-                    </div>
-                    <div class="link-group">
-                        <a href="https://www.youtube.com/watch?v=5gsqGUOcnxo&list=PLJDP7klg61pI" target="_blank" rel="noopener noreferrer" class="link-btn">
-                            Stories I produced for the BBC →
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=G6iv-6H5y0w&list=PLWy7CFm-iR3Y" target="_blank" rel="noopener noreferrer" class="link-btn">
-                            Editing BBC Xtra Weekly Magazine →
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=TMdGg5JpPNQ&list=PLOtYxGAGzkHU&pp=sAgC" target="_blank" rel="noopener noreferrer" class="link-btn">
-                            Editing AL MASHHAD with Gisele Khoury →
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+        <div class="card">
+          <h3>Al-Mashhad</h3>
+          <p>Post-production editing for feature stories with Gisele Khoury.</p>
         </div>
-    </div>
-
-    <!-- TRANSLATION -->
-    <div id="translation" class="page-content">
-        <div class="subpage-inner">
-
-            <div class="section-header">
-                <h2 class="section-title">Selected Translation Work</h2>
-                <div class="section-divider"></div>
-                <p class="section-intro">
-                    As a published translator, I translate and copyedit submission dossiers, articles, and literary books. I also provide transcriptions and subtitles for films. Here is a selection of my recent work:
-                </p>
-            </div>
-
-            <div class="translation-container">
-
-                <div class="card full-width-card">
-                    <span class="card-tag">Documentary Treatment Translation</span>
-                    <h3 class="card-title">Sixth Story</h3>
-                    <p class="card-desc">
-                        Translation of the treatment of "Sixth Story", a feature documentary directed by Ahmed Abd and produced by Larsa Films.
-                    </p>
-                    <div class="link-group">
-                        <a href="https://www.dohafilm.com/en/contents/0c7b314a-16c2-4d15-8eb5-7ec410dde095" target="_blank" rel="noopener noreferrer" class="link-btn">
-                            View on Doha Film Institute (Still in Development) →
-                        </a>
-                    </div>
-                </div>
-
-                <div class="card full-width-card">
-                    <span class="card-tag">Literary Translation</span>
-                    <h3 class="card-title">Tarjim Initiative</h3>
-                    <p class="card-desc">
-                        Translated Arabic poetry and fiction into English for the Saudi Ministry of Culture in collaboration with Nomads Publishing London.
-                    </p>
-
-                    <div class="tarjim-grid">
-                        <div class="work-item">
-                            <span class="work-item-author">Shtiwi Al Githi</span>
-                            <a href="https://www.waterstones.com/book/a-tale-of-ancient-whiteness/shtiwi-al-githi/mira-el-hayek/9781914325717" target="_blank" rel="noopener noreferrer" class="article-link">A Tale of Ancient Whiteness</a>
-                        </div>
-                        <div class="work-item">
-                            <span class="work-item-author">Dr. Ahmad Bin Issa Al Hilaly</span>
-                            <a href="https://www.waterstones.com/book/solid-drops/dr-ahmad-bin-issa-al-hilaly/mira-el-hayek/9781914325724" target="_blank" rel="noopener noreferrer" class="article-link">Solid Drops</a>
-                        </div>
-                        <div class="work-item">
-                            <span class="work-item-author">Abdulrahim Farghali</span>
-                            <a href="https://www.waterstones.com/book/dates-and-bullets/abdulrahim-farghali/mira-el-hayek/9781914325786" target="_blank" rel="noopener noreferrer" class="article-link">Dates and Bullets</a>
-                        </div>
-                        <div class="work-item">
-                            <span class="work-item-author">Muhammad Kheder</span>
-                            <a href="https://www.waterstones.com/book/development/muhammad-kheder/mira-el-hayek/9781914325700" target="_blank" rel="noopener noreferrer" class="article-link">Development</a>
-                        </div>
-                        <div class="work-item">
-                            <span class="work-item-author">Awadh Al-Osaimi</span>
-                            <a href="https://www.waterstones.com/book/the-smuggler-and-other-tales/awadh-al-osaimi/mira-el-hayek/9781914325557" target="_blank" rel="noopener noreferrer" class="article-link">The Smuggler and Other Tales</a>
-                        </div>
-                        <div class="work-item">
-                            <span class="work-item-author">Muhammed Ibrahim Yaghob</span>
-                            <a href="https://www.ipgbook.com/a-place-of-forgetfulness-products-9781914325694.php" target="_blank" rel="noopener noreferrer" class="article-link">A Place of Forgetfulness</a>
-                        </div>
-                        <div class="work-item">
-                            <span class="work-item-author">Abdo Khal</span>
-                            <a href="https://www.ipgbook.com/the-cistern-products-9781914325564.php" target="_blank" rel="noopener noreferrer" class="article-link">The Cistern (Songs for Abandoned Nests)</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card full-width-card">
-                    <span class="card-tag">Journalism & Features</span>
-                    <h3 class="card-title">L'Orient-Le Jour Translations</h3>
-                    <p class="card-desc">Selected journalistic and essay translations for L'Orient-Le Jour.</p>
-
-                    <div class="lorient-grid">
-                        <div>
-                            <div class="cat-heading">Arabic to English</div>
-                            <div class="work-list">
-                                <div class="work-item">
-                                    <span class="work-item-author">Amani el Hassan</span>
-                                    <a href="https://today.lorientlejour.com/article/1542345/how-the-lack-of-sidewalks-further-isolates-women-in-southern-iraqi-cities.html" target="_blank" rel="noopener noreferrer" class="article-link">How the lack of sidewalks further isolates women in southern Iraqi cities</a>
-                                </div>
-                                <div class="work-item">
-                                    <span class="work-item-author">Badar Salem</span>
-                                    <a href="https://today.lorientlejour.com/article/1540115/gaza-and-the-politics-of-no-future.html" target="_blank" rel="noopener noreferrer" class="article-link">Gaza and the politics of no future</a>
-                                </div>
-                                <div class="work-item">
-                                    <span class="work-item-author">Maya Yaghi</span>
-                                    <a href="https://today.lorientlejour.com/article/1538030/displacement-bags-when-pain-guards-your-sleep.html" target="_blank" rel="noopener noreferrer" class="article-link">Displacement bags: When pain guards your sleep</a>
-                                </div>
-                                <div class="work-item">
-                                    <span class="work-item-author">Khaldoun Al Mallah</span>
-                                    <a href="https://today.lorientlejour.com/article/1503053/the-slug-effect-despair-as-a-mode-of-resistance.html" target="_blank" rel="noopener noreferrer" class="article-link">The Slug Effect: Despair as a mode of resistance</a>
-                                </div>
-                                <div class="work-item">
-                                    <span class="work-item-author">Mohammad Barakat</span>
-                                    <a href="https://today.lorientlejour.com/article/1538448/the-military-fight-against-hezbollah-a-failed-approach.html" target="_blank" rel="noopener noreferrer" class="article-link">The military fight against Hezbollah: A failed approach</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="cat-heading">Arabic to French</div>
-                            <div class="work-list">
-                                <div class="work-item">
-                                    <span class="work-item-author">Badar Salem</span>
-                                    <a href="https://www.lorientlejour.com/article/1540012/gaza-ou-la-politique-de-lavenir-confisque.html" target="_blank" rel="noopener noreferrer" class="article-link">Gaza ou la politique de l'avenir confisqué</a>
-                                </div>
-                                <div class="work-item">
-                                    <span class="work-item-author">Maya Yaghi</span>
-                                    <a href="https://www.lorientlejour.com/article/1537957/les-valises-du-deplacement-quand-la-douleur-veille-sur-nous.html" target="_blank" rel="noopener noreferrer" class="article-link">Les valises du déplacement : quand la douleur veille sur nous</a>
-                                </div>
-                                <div class="work-item">
-                                    <span class="work-item-author">Khaldoun Al Mallah</span>
-                                    <a href="https://www.lorientlejour.com/article/1503036/leffet-limace-le-desespoir-comme-methode-de-resistance.html" target="_blank" rel="noopener noreferrer" class="article-link">L'effet limace : le désespoir comme méthode de resistance</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="card">
+          <h3>Ma Ikhtalafna</h3>
+          <p>Post-production workflow and broadcast editing for Al Araby Plus.</p>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- TRANSCRIPTION & SUBTITLES -->
-    <div id="subtitles" class="page-content">
-        <div class="subpage-inner">
-
-            <div class="section-header">
-                <h2 class="section-title">Transcription & Subtitles</h2>
-                <div class="section-divider"></div>
-                <p class="section-intro">
-                    Professional transcription, post-production subtitle creation, and translation for feature films, documentaries, and investigative podcasts.
-                </p>
-            </div>
-
-            <div class="grid">
-
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Feature Documentary</span>
-                        <h3 class="card-title">Flana</h3>
-                        <p class="card-desc">
-                            French-Iraqi co-production directed by Zahraa Ghandour. Handled transcription, translation and subtitle creation in both English and French.
-                        </p>
-                    </div>
-                    <div class="link-group">
-                        <a href="https://www.imdb.com/title/tt37815968/" target="_blank" rel="noopener noreferrer" class="link-btn">View on IMDb →</a>
-                        <a href="https://www.youtube.com/watch?v=CL0fhT4SfqE" target="_blank" rel="noopener noreferrer" class="link-btn">Watch Trailer →</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Feature Documentary</span>
-                        <h3 class="card-title">#FollowMe</h3>
-                        <p class="card-desc">
-                            Feature documentary directed by Anna Bruun Nørager and produced by Toolbox Film. Handled professional English subtitling work.
-                        </p>
-                    </div>
-                    <div class="link-group">
-                        <a href="https://www.imdb.com/title/tt13222912/" target="_blank" rel="noopener noreferrer" class="link-btn">View on IMDb →</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Investigative Audio</span>
-                        <h3 class="card-title">Lebanon Heist Podcast</h3>
-                        <p class="card-desc">
-                            Transcribed and edited interview content for Kerning Cultures' acclaimed narrative podcast series.
-                        </p>
-                    </div>
-                    <div class="link-group">
-                        <a href="https://kerningcultures.com/kerning-cultures-to-launch-the-lebanon-heist-this-summer/" target="_blank" rel="noopener noreferrer" class="link-btn">Listen / Read Announcement →</a>
-                    </div>
-                </div>
-
-            </div>
+    <section id="translation-work">
+      <h2>Literary Translations</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>A Tale of Ancient Whiteness</h3>
+          <p>Author: Shtiwi Al-Githi</p>
         </div>
-    </div>
-
-    <!-- AWARDS -->
-    <div id="awards" class="page-content">
-        <div class="subpage-inner">
-
-            <div class="section-header">
-                <h2 class="section-title">Honors & Awards</h2>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="grid">
-
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Journalism Excellence</span>
-                        <h3 class="card-title">Samir Kassir Award for Freedom of Press</h3>
-                        <p class="card-desc">
-                            Nominated Finalist (2019) for exceptional journalistic integrity and commitment to freedom of expression.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Creative Recognition</span>
-                        <h3 class="card-title">Deutsche Bank Creative Awards</h3>
-                        <p class="card-desc">Winner (2012).</p>
-                    </div>
-                </div>
-
-            </div>
+        <div class="card">
+          <h3>Solid Drops</h3>
+          <p>Author: Dr. Ahmad Bin Issa Al-Hilaly</p>
         </div>
-    </div>
-
-    <!-- CONTACT -->
-    <div id="contact" class="page-content" style="text-align: center;">
-        <div class="subpage-inner">
-
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="section-divider"></div>
-                <p style="color: var(--text-muted); font-size: 1.05rem; margin-top: 1rem;">
-                    Currently taking on select projects, let's collaborate.
-                </p>
-            </div>
-
-            <div class="contact-container">
-                <div class="btn-row">
-                    <a href="mailto:elhayekmira@gmail.com" class="btn">Email Me</a>
-                </div>
-
-                <div class="btn-row">
-                    <a href="https://wa.me/96170266883" target="_blank" rel="noopener noreferrer" class="btn">WhatsApp</a>
-                    <a href="https://www.linkedin.com/in/mirahayek/" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
-                </div>
-            </div>
-
+        <div class="card">
+          <h3>Dates and Bullets</h3>
+          <p>Author: Abdulrahim Farghali</p>
         </div>
-    </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© Mira El Hayek</p>
-    </footer>
-
-    <!-- JAVASCRIPT -->
-    <script>
-        function showPage(pageId, element) {
-            const pages = document.querySelectorAll('.page-content');
-            pages.forEach(page => page.classList.remove('active'));
-
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => link.classList.remove('active'));
-
-            document.getElementById(pageId).classList.add('active');
-
-            if (element) {
-                element.classList.add('active');
-            } else {
-                navLinks.forEach(link => {
-                    if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(pageId)) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-    </script>
+  <footer>
+    <p>&copy; 2026 Mira El Hayek. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
