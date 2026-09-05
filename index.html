@@ -560,21 +560,49 @@
                 padding: 0.2rem 0;
             }
 
+            /* Shift card higher and fit homepage content cleanly without scrolling */
             .home-section {
-                padding: 8rem 4% 3rem;
+                padding: 4.8rem 3% 1rem;
+                min-height: calc(100vh - 60px);
+                justify-content: flex-start;
             }
 
             .hero-content {
-                padding: 2rem 1.2rem;
+                padding: 1.5rem 1.1rem;
+                margin-top: 0.5rem;
             }
 
             .hero-title {
-                font-size: 2.6rem;
+                font-size: 2.2rem;
+                margin-bottom: 0.4rem;
+            }
+
+            .hero-role {
+                font-size: 0.98rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .about-text {
+                font-size: 0.92rem;
+                line-height: 1.5;
+            }
+
+            .clients-section {
+                margin-top: 1.2rem;
+                gap: 0.75rem;
+            }
+
+            .trusted-label {
+                font-size: 0.75rem;
+            }
+
+            .client-logos-wrapper {
+                gap: 1.2rem 1.5rem;
             }
 
             .client-logos-wrapper img {
-                height: 28px;
-                max-width: 110px;
+                height: 22px;
+                max-width: 90px;
             }
 
             .page-content {
