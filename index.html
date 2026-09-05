@@ -293,7 +293,6 @@
             margin: 0 auto;
         }
 
-        /* COMPACT SECTION HEADER RECTANGLE */
         .section-header {
             text-align: center;
             margin-bottom: 2rem;
@@ -1152,7 +1151,11 @@
     </footer>
 
     <script>
-        function showPage(pageId, element) {
+        function showPage(pageId, element, skipHashUpdate) {
+            if (!pageId || !document.getElementById(pageId)) {
+                pageId = 'home';
+            }
+
             // Hide all pages
             const pages = document.querySelectorAll('.page-content');
             pages.forEach(page => page.classList.remove('active'));
@@ -1178,11 +1181,11 @@
                 });
             }
 
-            // Sync URL hash state
-            if (history.pushState) {
-                history.pushState(null, null, '#' + pageId);
-            } else {
-                location.hash = '#' + pageId;
+            // Sync URL hash state unless internal routing skips it
+            if (!skipHashUpdate) {
+                if (window.location.hash !== '#' + pageId) {
+                    history.pushState(null, null, '#' + pageId);
+                }
             }
 
             window.scrollTo({
@@ -1191,22 +1194,31 @@
             });
         }
 
-        // Handle page reload or initial deep-linking
-        window.addEventListener('DOMContentLoaded', () => {
+        function initRoute() {
             const currentHash = window.location.hash.replace('#', '');
             if (currentHash && document.getElementById(currentHash)) {
-                showPage(currentHash);
+                showPage(currentHash, null, true);
             } else {
-                showPage('home');
+                showPage('home', null, true);
             }
-        });
+        }
 
-        // Handle browser Back / Forward buttons
+        // Handle page load & DOM Ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initRoute);
+        } else {
+            initRoute();
+        }
+
+        // Handle browser Back / Forward buttons and mobile hash refreshes
         window.addEventListener('popstate', () => {
             const currentHash = window.location.hash.replace('#', '') || 'home';
-            if (document.getElementById(currentHash)) {
-                showPage(currentHash);
-            }
+            showPage(currentHash, null, true);
+        });
+
+        window.addEventListener('hashchange', () => {
+            const currentHash = window.location.hash.replace('#', '') || 'home';
+            showPage(currentHash, null, true);
         });
     </script>
 
