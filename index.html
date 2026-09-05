@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
-    <!-- Google Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YR6EHK22J0"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -14,7 +13,6 @@
       gtag('config', 'G-YR6EHK22J0');
     </script>
 
-    <!-- Primary SEO Metadata -->
     <title>Mira El Hayek | Producer, Video Editor & Published Translator</title>
     <meta name="description" content="Official portfolio of Mira El Hayek — Producer, Video Editor, and Published Translator with over 15 years of experience in broadcast networks, independent films, and publishing houses.">
     <meta name="keywords" content="Mira El Hayek, Mira El-Hayek, Producer, Video Editor, Published Translator, Post-Production, Literary Translation, Arabic Translation, Subtitles">
@@ -22,20 +20,17 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://elhayekmira.com/">
 
-    <!-- Open Graph / Social Media Metadata -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://elhayekmira.com/">
     <meta property="og:title" content="Mira El Hayek | Producer, Video Editor & Published Translator">
     <meta property="og:description" content="Official portfolio of Mira El Hayek showcasing video production, post-production management, editing, and published literary translations.">
     <meta property="og:image" content="https://elhayekmira.com/m.png">
 
-    <!-- Twitter Card Metadata -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mira El Hayek | Producer, Video Editor & Published Translator">
     <meta name="twitter:description" content="Official portfolio of Mira El Hayek showcasing video production, post-production management, editing, and published literary translations.">
     <meta name="twitter:image" content="https://elhayekmira.com/m.png">
 
-    <!-- Structured Data / JSON-LD Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -52,7 +47,6 @@
     }
     </script>
 
-    <!-- FAVICON ICON (SAFARI & SERVER FALLBACKS) -->
     <link rel="icon" type="image/svg+xml" href="m.svg?v=3">
     <link rel="mask-icon" href="m.svg?v=3" color="#f0b839">
     <link rel="apple-touch-icon" sizes="180x180" href="m.png">
@@ -61,7 +55,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
@@ -73,7 +68,6 @@
             --text-bright: #ffffff;
             --text-muted: #e6ded6;
             
-            /* Unified Warm Amber Button Color */
             --btn-warm: #d99b26;
             --btn-warm-hover: #be841b;
         }
@@ -92,16 +86,19 @@
         body {
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('clothesline.jpg') center center / cover no-repeat fixed;
             color: var(--text-bright);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.65;
+            letter-spacing: 0.01em;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, .hero-title {
-            font-family: 'Playfair Display', serif;
+        h1, h2, h3, .hero-title, .section-title, .project-main-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            letter-spacing: -0.01em;
         }
 
         /* NAVIGATION */
@@ -130,8 +127,9 @@
         .nav-link {
             color: var(--text-muted);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.03em;
             cursor: pointer;
             transition: color 0.25s ease;
             padding: 0.2rem 0;
@@ -153,7 +151,6 @@
             border-bottom: 2px solid var(--accent-ochre);
         }
 
-        /* Desktop vs Mobile Menu Text Toggle */
         .mobile-text {
             display: none;
         }
@@ -188,21 +185,23 @@
         }
 
         .hero-title {
-            font-size: 3.8rem;
+            font-size: 4.2rem;
             font-weight: 700;
             line-height: 1.05;
             margin-top: 0;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             color: #ffffff;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
         }
 
         .hero-role {
-            font-size: 1.3rem;
-            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
             color: var(--accent-ochre);
             margin-bottom: 1.2rem;
-            letter-spacing: 0.5px;
             text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
         }
 
@@ -214,12 +213,12 @@
         }
 
         .about-text {
-            font-size: 1.1rem;
-            color: #ffffff;
-            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #e2dcd5;
+            line-height: 1.75;
             max-width: 720px;
             margin-top: 0.5rem;
-            font-weight: 500;
+            font-weight: 300;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
         }
 
@@ -233,11 +232,11 @@
         }
 
         .trusted-label {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 2.5px;
             color: var(--accent-ochre);
-            font-weight: 700;
+            font-weight: 600;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
         }
 
@@ -265,10 +264,10 @@
             opacity: 1;
         }
 
-        /* SUBPAGES (HEAVILY BLURRED BACKGROUND) */
+        /* SUBPAGES */
         .page-content {
             display: none;
-            padding: 7.5rem 8% 5rem;
+            padding: 6.5rem 8% 4rem;
             max-width: 1200px;
             margin: 0 auto;
             flex: 1;
@@ -294,38 +293,31 @@
             margin: 0 auto;
         }
 
+        /* COMPACT SECTION HEADER RECTANGLE */
         .section-header {
             text-align: center;
-            margin-bottom: 3.5rem;
+            margin-bottom: 2rem;
             background: var(--card-glass);
-            padding: 2.5rem 2rem;
-            border-radius: 20px;
+            padding: 1.1rem 1.5rem;
+            border-radius: 14px;
             border: 1px solid var(--border-glass);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
         }
 
         .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 2.3rem;
+            font-weight: 600;
             color: #ffffff;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
             text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-        }
-
-        .section-intro {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            max-width: 720px;
-            margin: 0.75rem auto 0;
-            line-height: 1.7;
-            font-weight: 500;
+            line-height: 1.1;
         }
 
         .section-divider {
-            width: 50px;
-            height: 3px;
+            width: 40px;
+            height: 2px;
             background: var(--accent-ochre);
             margin: 0 auto;
         }
@@ -352,14 +344,14 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2.5rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
         .tarjim-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.25rem 2.5rem;
-            margin-top: 1rem;
+            gap: 1.5rem 2.5rem;
+            margin-top: 1.5rem;
         }
 
         .card {
@@ -382,35 +374,43 @@
             box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
         }
 
-        .card-tag {
+        .project-main-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.1rem;
+            font-weight: 600;
             color: var(--accent-ochre);
-            font-size: 1.25rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
             display: block;
+            margin-bottom: 0.15rem;
+            line-height: 1.2;
         }
 
-        .card-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin: 0.3rem 0 0.5rem;
-            color: #ffffff;
+        .project-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+            display: block;
         }
 
         .card-desc {
             color: var(--text-muted);
-            font-size: 0.98rem;
+            font-size: 0.92rem;
+            font-weight: 300;
+            line-height: 1.65;
             margin-bottom: 1.25rem;
         }
 
         .cat-heading {
-            font-size: 0.9rem;
-            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             color: var(--accent-ochre);
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
             padding-bottom: 0.35rem;
             border-bottom: 1px solid var(--border-glass);
         }
@@ -418,7 +418,7 @@
         .work-list {
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 1rem;
         }
 
         .work-item {
@@ -426,23 +426,28 @@
             flex-direction: column;
         }
 
-        .work-item-author {
-            font-size: 0.88rem;
-            font-weight: 700;
+        .work-item-meta {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.35rem;
+            font-weight: 600;
             color: var(--accent-ochre);
+            margin-bottom: 0.1rem;
+            line-height: 1.2;
+            text-transform: uppercase;
         }
 
         .article-link {
+            font-family: 'Inter', sans-serif;
             color: var(--text-bright);
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: 500;
+            line-height: 1.35;
             transition: color 0.2s ease;
         }
 
         .article-link:hover {
             color: var(--accent-ochre);
-            text-decoration: underline;
         }
 
         .link-group {
@@ -455,8 +460,9 @@
         .link-btn {
             color: var(--accent-ochre);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.92rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
             transition: opacity 0.2s ease;
         }
 
@@ -465,51 +471,96 @@
             opacity: 0.85;
         }
 
-        /* CONTACT & UNIFIED WARM BUTTONS */
-        .contact-container {
-            display: flex;
+        /* COMPACT CONTACT PAGE STYLES */
+        #contact.page-content {
+            padding-top: 5.5rem;
+            padding-bottom: 2.5rem;
+            min-height: auto;
+            display: none;
             flex-direction: column;
-            gap: 1.25rem;
-            align-items: center;
             justify-content: center;
-            margin-top: 1.5rem;
+            align-items: center;
         }
 
-        .btn-row {
+        #contact.page-content.active {
             display: flex;
-            gap: 1.25rem;
-            justify-content: center;
+        }
+
+        #contact .subpage-inner {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #contact .section-header {
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.25rem;
             width: 100%;
             max-width: 480px;
         }
 
-        .btn {
-            padding: 0.95rem 2rem;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 1rem;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex: 1;
-            min-width: 200px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-            background: var(--btn-warm);
-            color: #ffffff;
-            border: 1px solid var(--btn-warm);
+        #contact .section-title {
+            font-size: 2rem;
+            margin-bottom: 0.2rem;
         }
 
-        .btn:hover {
-            transform: translateY(-3px);
-            background: var(--btn-warm-hover);
-            border-color: var(--btn-warm-hover);
+        .contact-card-wrapper {
+            max-width: 480px;
+            width: 100%;
+            margin: 0 auto;
+            background: var(--card-glass);
+            border-radius: 16px;
+            border: 1px solid var(--border-glass);
+            padding: 1.25rem;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .contact-pill-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1.5px solid var(--accent-ochre);
+            border-radius: 40px;
+            padding: 0.4rem 0.6rem;
+            text-decoration: none;
+            transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .contact-pill-item:hover {
+            transform: translateY(-2px);
+            background: rgba(240, 184, 57, 0.12);
+            border-color: #ffd269;
+            box-shadow: 0 6px 20px rgba(240, 184, 57, 0.2);
+        }
+
+        .pill-icon-circle {
+            width: 36px;
+            height: 36px;
+            background: var(--btn-warm);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: #ffffff;
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+            font-size: 0.95rem;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .pill-text {
+            color: #ffffff;
+            font-size: 0.92rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-left: 0.85rem;
+            word-break: break-word;
         }
 
         /* FOOTER */
@@ -518,7 +569,8 @@
             padding: 2.5rem 0;
             background: rgba(14, 11, 8, 0.85);
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.03em;
             margin-top: auto;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(12px);
@@ -527,13 +579,12 @@
 
         /* MOBILE RESPONSIVENESS */
         @media (max-width: 900px) {
-            .lorient-grid, .tarjim-grid {
+            .lorient-grid, .tarjim-grid, .grid {
                 grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 768px) {
-            /* Toggle Desktop vs Mobile text labels */
             .desktop-text {
                 display: none;
             }
@@ -544,7 +595,7 @@
 
             nav {
                 justify-content: center;
-                padding: 0.8rem 3%;
+                padding: 0.75rem 3%;
             }
 
             .nav-links {
@@ -560,78 +611,164 @@
                 padding: 0.2rem 0;
             }
 
-            /* Shift card higher and fit homepage content cleanly without scrolling */
             .home-section {
-                padding: 4.8rem 3% 1rem;
-                min-height: calc(100vh - 60px);
+                padding: 4.5rem 3% 1rem;
+                min-height: calc(100vh - 50px);
                 justify-content: flex-start;
             }
 
             .hero-content {
-                padding: 1.5rem 1.1rem;
-                margin-top: 0.5rem;
+                padding: 1.25rem 1rem;
+                margin-top: 0.25rem;
             }
 
             .hero-title {
-                font-size: 2.2rem;
-                margin-bottom: 0.4rem;
+                font-size: 2.6rem;
+                margin-bottom: 0.2rem;
             }
 
             .hero-role {
-                font-size: 0.98rem;
-                margin-bottom: 0.8rem;
+                font-size: 0.78rem;
+                letter-spacing: 1.5px;
+                margin-bottom: 0.6rem;
             }
 
             .about-text {
-                font-size: 0.92rem;
+                font-size: 0.9rem;
                 line-height: 1.5;
             }
 
             .clients-section {
-                margin-top: 1.2rem;
-                gap: 0.75rem;
+                margin-top: 1rem;
+                gap: 0.6rem;
             }
 
             .trusted-label {
-                font-size: 0.75rem;
+                font-size: 0.68rem;
+                letter-spacing: 1.8px;
             }
 
             .client-logos-wrapper {
-                gap: 1.2rem 1.5rem;
+                gap: 1rem 1.2rem;
             }
 
             .client-logos-wrapper img {
-                height: 22px;
-                max-width: 90px;
+                height: 20px;
+                max-width: 85px;
             }
 
+            /* COMPACT MOBILE PAGES */
             .page-content {
-                padding: 7rem 5% 3rem;
+                padding: 4.2rem 4% 2rem !important;
             }
 
             .page-content:not(#home) {
-                padding-left: 5%;
-                padding-right: 5%;
+                padding-left: 4% !important;
+                padding-right: 4% !important;
+            }
+
+            .subpage-inner {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
             }
 
             .section-header {
-                padding: 2rem 1.2rem;
+                padding: 0.85rem 0.8rem;
+                margin-bottom: 1rem;
+                border-radius: 12px;
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 1.7rem;
             }
 
-            .grid {
-                grid-template-columns: 1fr;
+            .grid, .translation-container {
+                gap: 1rem;
             }
 
-            .btn-row {
-                flex-direction: column;
+            .card {
+                padding: 1.25rem;
+                border-radius: 14px;
             }
 
-            .btn {
-                width: 100%;
+            .project-main-title {
+                font-size: 1.6rem;
+            }
+
+            .project-subtitle {
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .card-desc {
+                font-size: 0.88rem;
+                line-height: 1.5;
+                margin-bottom: 0.8rem;
+            }
+
+            .cat-heading {
+                font-size: 0.75rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .work-item-meta {
+                font-size: 1.2rem;
+            }
+
+            .article-link {
+                font-size: 0.9rem;
+            }
+
+            .tarjim-grid, .lorient-grid {
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+
+            /* COMPACT CONTACT MOBILE */
+            #contact.page-content {
+                padding: 4.2rem 4% 1.5rem !important;
+                min-height: auto;
+                justify-content: center;
+            }
+
+            #contact .section-header {
+                padding: 0.75rem;
+                margin-bottom: 0.75rem;
+            }
+
+            #contact .section-title {
+                font-size: 1.5rem;
+            }
+
+            #contact .section-header p {
+                font-size: 0.82rem !important;
+                margin-top: 0.25rem !important;
+            }
+
+            .contact-card-wrapper {
+                padding: 0.85rem;
+                border-radius: 14px;
+                gap: 0.6rem;
+            }
+
+            .contact-pill-item {
+                padding: 0.35rem 0.5rem;
+            }
+
+            .pill-icon-circle {
+                width: 32px;
+                height: 32px;
+                font-size: 0.85rem;
+            }
+
+            .pill-text {
+                font-size: 0.85rem;
+                margin-left: 0.65rem;
+            }
+
+            footer.contact-footer-override {
+                display: none;
             }
         }
     </style>
@@ -639,7 +776,6 @@
 
 <body>
 
-    <!-- NAVIGATION -->
     <nav>
         <div class="nav-links">
             <span class="nav-link active" onclick="showPage('home', this)">Home</span>
@@ -660,7 +796,6 @@
         </div>
     </nav>
 
-    <!-- HOME -->
     <div id="home" class="page-content active" style="padding: 0; max-width: 100%;">
         <section class="home-section">
 
@@ -697,7 +832,6 @@
         </section>
     </div>
 
-    <!-- MEDIA WORK -->
     <div id="media" class="page-content">
         <div class="subpage-inner">
 
@@ -710,8 +844,8 @@
 
                 <div class="card">
                     <div>
-                        <span class="card-tag">Post-Production & Editing</span>
-                        <h3 class="card-title">Chex Stadium</h3>
+                        <span class="project-main-title">Chex Stadium</span>
+                        <span class="project-subtitle">Al Jazeera O2</span>
                         <p class="card-desc">
                             Spearheaded the post-production editing and creative development of "Chex Stadium" for Al Jazeera O2.
                         </p>
@@ -720,10 +854,10 @@
 
                 <div class="card">
                     <div>
-                        <span class="card-tag">Broadcast Series</span>
-                        <h3 class="card-title">Ma Khtalafna Series</h3>
+                        <span class="project-main-title">Ma Khtalafna Series</span>
+                        <span class="project-subtitle">Al Araby TV / Fadaat Media</span>
                         <p class="card-desc">
-                            Post-production coordinator for Al Araby TV / Fadaat Media Qatar, managing editing schedules, sound design, and final delivery.
+                            Post-production coordinator managing editing schedules, sound design, and final broadcast delivery.
                         </p>
                     </div>
                     <div class="link-group">
@@ -735,10 +869,10 @@
 
                 <div class="card">
                     <div>
-                        <span class="card-tag">Broadcast & Digital Journalism</span>
-                        <h3 class="card-title">BBC</h3>
+                        <span class="project-main-title">Broadcast & Digital Journalism</span>
+                        <span class="project-subtitle">BBC News</span>
                         <p class="card-desc">
-                            Edited TV programs between 2018 and 2020 (BBC Xtra, Dunyana, The Scene), as well as producing digital stories after 2020, all adhering to international media standards across broadcast and digital platforms.
+                            Edited TV programs between 2018 and 2020 (BBC Xtra, Dunyana, The Scene), as well as producing digital stories after 2020 across broadcast and digital platforms.
                         </p>
                     </div>
                     <div class="link-group">
@@ -758,7 +892,6 @@
         </div>
     </div>
 
-    <!-- TRANSLATION -->
     <div id="translation" class="page-content">
         <div class="subpage-inner">
 
@@ -770,10 +903,10 @@
             <div class="translation-container">
 
                 <div class="card full-width-card">
-                    <span class="card-tag">Documentary Treatment Translation</span>
-                    <h3 class="card-title">Sixth Story</h3>
+                    <span class="project-main-title">Sixth Story</span>
+                    <span class="project-subtitle">Larsa Films / Doha Film Institute</span>
                     <p class="card-desc">
-                        Translation of the treatment of "Sixth Story", a feature documentary directed by Ahmed Abd and produced by Larsa Films.
+                        Translation of the documentary treatment for "Sixth Story", a feature film directed by Ahmed Abd.
                     </p>
                     <div class="link-group">
                         <a href="https://www.dohafilm.com/en/contents/0c7b314a-16c2-4d15-8eb5-7ec410dde095" target="_blank" rel="noopener noreferrer" class="link-btn">
@@ -783,71 +916,71 @@
                 </div>
 
                 <div class="card full-width-card">
-                    <span class="card-tag">Literary Translation</span>
-                    <h3 class="card-title">Tarjim Initiative</h3>
+                    <span class="project-main-title">Literary Book Translations</span>
+                    <span class="project-subtitle">Tarjim Initiative (Saudi Ministry of Culture)</span>
                     <p class="card-desc">
-                        Translated Arabic poetry and fiction into English for the Saudi Ministry of Culture in collaboration with Nomads Publishing London.
+                        Translated Arabic poetry and fiction into English for international publication with Nomads Publishing London.
                     </p>
 
                     <div class="tarjim-grid">
                         <div class="work-item">
-                            <span class="work-item-author">Shtiwi Al Githi</span>
+                            <span class="work-item-meta">Shtiwi Al Githi</span>
                             <a href="https://www.waterstones.com/book/a-tale-of-ancient-whiteness/shtiwi-al-githi/mira-el-hayek/9781914325717" target="_blank" rel="noopener noreferrer" class="article-link">A Tale of Ancient Whiteness</a>
                         </div>
                         <div class="work-item">
-                            <span class="work-item-author">Dr. Ahmad Bin Issa Al Hilaly</span>
+                            <span class="work-item-meta">Dr. Ahmad Bin Issa Al Hilaly</span>
                             <a href="https://www.waterstones.com/book/solid-drops/dr-ahmad-bin-issa-al-hilaly/mira-el-hayek/9781914325724" target="_blank" rel="noopener noreferrer" class="article-link">Solid Drops</a>
                         </div>
                         <div class="work-item">
-                            <span class="work-item-author">Abdulrahim Farghali</span>
+                            <span class="work-item-meta">Abdulrahim Farghali</span>
                             <a href="https://www.waterstones.com/book/dates-and-bullets/abdulrahim-farghali/mira-el-hayek/9781914325786" target="_blank" rel="noopener noreferrer" class="article-link">Dates and Bullets</a>
                         </div>
                         <div class="work-item">
-                            <span class="work-item-author">Muhammad Kheder</span>
+                            <span class="work-item-meta">Muhammad Kheder</span>
                             <a href="https://www.waterstones.com/book/development/muhammad-kheder/mira-el-hayek/9781914325700" target="_blank" rel="noopener noreferrer" class="article-link">Development</a>
                         </div>
                         <div class="work-item">
-                            <span class="work-item-author">Awadh Al-Osaimi</span>
+                            <span class="work-item-meta">Awadh Al-Osaimi</span>
                             <a href="https://www.waterstones.com/book/the-smuggler-and-other-tales/awadh-al-osaimi/mira-el-hayek/9781914325557" target="_blank" rel="noopener noreferrer" class="article-link">The Smuggler and Other Tales</a>
                         </div>
                         <div class="work-item">
-                            <span class="work-item-author">Muhammed Ibrahim Yaghob</span>
+                            <span class="work-item-meta">Muhammed Ibrahim Yaghob</span>
                             <a href="https://www.ipgbook.com/a-place-of-forgetfulness-products-9781914325694.php" target="_blank" rel="noopener noreferrer" class="article-link">A Place of Forgetfulness</a>
                         </div>
                         <div class="work-item">
-                            <span class="work-item-author">Abdo Khal</span>
+                            <span class="work-item-meta">Abdo Khal</span>
                             <a href="https://www.ipgbook.com/the-cistern-products-9781914325564.php" target="_blank" rel="noopener noreferrer" class="article-link">The Cistern (Songs for Abandoned Nests)</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="card full-width-card">
-                    <span class="card-tag">Journalism & Features</span>
-                    <h3 class="card-title">L'Orient-Le Jour</h3>
-                    <p class="card-desc">Selected journalistic and essay translations for L'Orient-Le Jour.</p>
+                    <span class="project-main-title">Journalism & Feature Translations</span>
+                    <span class="project-subtitle">L'Orient-Le Jour</span>
+                    <p class="card-desc">Selected published translations across English and French editions.</p>
 
                     <div class="lorient-grid">
                         <div>
                             <div class="cat-heading">Arabic to English</div>
                             <div class="work-list">
                                 <div class="work-item">
-                                    <span class="work-item-author">Amani el Hassan</span>
+                                    <span class="work-item-meta">Amani el Hassan</span>
                                     <a href="https://today.lorientlejour.com/article/1542345/how-the-lack-of-sidewalks-further-isolates-women-in-southern-iraqi-cities.html" target="_blank" rel="noopener noreferrer" class="article-link">How the lack of sidewalks further isolates women in southern Iraqi cities</a>
                                 </div>
                                 <div class="work-item">
-                                    <span class="work-item-author">Badar Salem</span>
+                                    <span class="work-item-meta">Badar Salem</span>
                                     <a href="https://today.lorientlejour.com/article/1540115/gaza-and-the-politics-of-no-future.html" target="_blank" rel="noopener noreferrer" class="article-link">Gaza and the politics of no future</a>
                                 </div>
                                 <div class="work-item">
-                                    <span class="work-item-author">Maya Yaghi</span>
+                                    <span class="work-item-meta">Maya Yaghi</span>
                                     <a href="https://today.lorientlejour.com/article/1538030/displacement-bags-when-pain-guards-your-sleep.html" target="_blank" rel="noopener noreferrer" class="article-link">Displacement bags: When pain guards your sleep</a>
                                 </div>
                                 <div class="work-item">
-                                    <span class="work-item-author">Khaldoun Al Mallah</span>
+                                    <span class="work-item-meta">Khaldoun Al Mallah</span>
                                     <a href="https://today.lorientlejour.com/article/1503053/the-slug-effect-despair-as-a-mode-of-resistance.html" target="_blank" rel="noopener noreferrer" class="article-link">The Slug Effect: Despair as a mode of resistance</a>
                                 </div>
                                 <div class="work-item">
-                                    <span class="work-item-author">Mohammad Barakat</span>
+                                    <span class="work-item-meta">Mohammad Barakat</span>
                                     <a href="https://today.lorientlejour.com/article/1538448/the-military-fight-against-hezbollah-a-failed-approach.html" target="_blank" rel="noopener noreferrer" class="article-link">The military fight against Hezbollah: A failed approach</a>
                                 </div>
                             </div>
@@ -857,15 +990,15 @@
                             <div class="cat-heading">Arabic to French</div>
                             <div class="work-list">
                                 <div class="work-item">
-                                    <span class="work-item-author">Badar Salem</span>
+                                    <span class="work-item-meta">Badar Salem</span>
                                     <a href="https://www.lorientlejour.com/article/1540012/gaza-ou-la-politique-de-lavenir-confisque.html" target="_blank" rel="noopener noreferrer" class="article-link">Gaza ou la politique de l'avenir confisqué</a>
                                 </div>
                                 <div class="work-item">
-                                    <span class="work-item-author">Maya Yaghi</span>
+                                    <span class="work-item-meta">Maya Yaghi</span>
                                     <a href="https://www.lorientlejour.com/article/1537957/les-valises-du-deplacement-quand-la-doueur-veille-sur-nous.html" target="_blank" rel="noopener noreferrer" class="article-link">Les valises du déplacement : quand la douleur veille sur nous</a>
                                 </div>
                                 <div class="work-item">
-                                    <span class="work-item-author">Khaldoun Al Mallah</span>
+                                    <span class="work-item-meta">Khaldoun Al Mallah</span>
                                     <a href="https://www.lorientlejour.com/article/1503036/leffet-limace-le-desespoir-comme-methode-de-resistance.html" target="_blank" rel="noopener noreferrer" class="article-link">L'effet limace : le désespoir comme méthode de resistance</a>
                                 </div>
                             </div>
@@ -877,7 +1010,6 @@
         </div>
     </div>
 
-    <!-- TRANSCRIPTION & SUBTITLES -->
     <div id="subtitles" class="page-content">
         <div class="subpage-inner">
 
@@ -890,10 +1022,10 @@
 
                 <div class="card">
                     <div>
-                        <span class="card-tag">Documentary Film</span>
-                        <h3 class="card-title">La Fille au Pied d'Argent</h3>
+                        <span class="project-main-title">La Fille au Pied d'Argent</span>
+                        <span class="project-subtitle">French Institute in Baghdad</span>
                         <p class="card-desc">
-                            Documentary directed by Zahraa Ghandour, produced by the French Institute in Baghdad. Handled transcription, translation and professional subtitling in French and English.
+                            Documentary directed by Zahraa Ghandour. Handled transcription, translation, and professional subtitling in French and English.
                         </p>
                     </div>
                     <div class="link-group">
@@ -903,10 +1035,10 @@
 
                 <div class="card">
                     <div>
-                        <span class="card-tag">Feature Documentary</span>
-                        <h3 class="card-title">Flana</h3>
+                        <span class="project-main-title">Flana</span>
+                        <span class="project-subtitle">French-Iraqi Co-Production</span>
                         <p class="card-desc">
-                            French-Iraqi co-production directed by Zahraa Ghandour. Handled transcription, translation and subtitle creation in both English and French.
+                            Feature documentary directed by Zahraa Ghandour. Handled transcription, translation, and subtitle creation in English and French.
                         </p>
                     </div>
                     <div class="link-group">
@@ -917,10 +1049,10 @@
 
                 <div class="card">
                     <div>
-                        <span class="card-tag">Feature Documentary</span>
-                        <h3 class="card-title">#FollowMe</h3>
+                        <span class="project-main-title">#FollowMe</span>
+                        <span class="project-subtitle">Toolbox Film</span>
                         <p class="card-desc">
-                            Feature documentary directed by Anna Bruun Nørager and produced by Toolbox Film. Handled professional English subtitling work.
+                            Feature documentary directed by Anna Bruun Nørager. Handled professional English subtitling.
                         </p>
                     </div>
                     <div class="link-group">
@@ -930,10 +1062,10 @@
 
                 <div class="card">
                     <div>
-                        <span class="card-tag">Investigative Audio</span>
-                        <h3 class="card-title">Lebanon Heist Podcast</h3>
+                        <span class="project-main-title">Lebanon Heist</span>
+                        <span class="project-subtitle">Kerning Cultures Podcast</span>
                         <p class="card-desc">
-                            Transcribed and edited interview content for Kerning Cultures' acclaimed narrative podcast series.
+                            Transcribed and edited audio interview content for Kerning Cultures' acclaimed narrative podcast series.
                         </p>
                     </div>
                     <div class="link-group">
@@ -945,7 +1077,6 @@
         </div>
     </div>
 
-    <!-- AWARDS -->
     <div id="awards" class="page-content">
         <div class="subpage-inner">
 
@@ -955,79 +1086,103 @@
             </div>
 
             <div class="grid">
-
+                
                 <div class="card">
-                    <div>
-                        <span class="card-tag">Journalism Excellence</span>
-                        <h3 class="card-title">Samir Kassir Award for Freedom of Press</h3>
-                        <p class="card-desc">
-                            Nominated Finalist (2019) for exceptional journalistic integrity and commitment to freedom of expression.
-                        </p>
-                    </div>
+                    <span class="project-main-title">Samir Kassir Award for Freedom of Press</span>
+                    <span class="project-subtitle">Journalism Excellence</span>
+                    <p class="card-desc" style="margin-bottom: 0;">
+                        Nominated Finalist (2019) for exceptional journalistic integrity and commitment to freedom of expression.
+                    </p>
                 </div>
 
                 <div class="card">
-                    <div>
-                        <span class="card-tag">Creative Recognition</span>
-                        <h3 class="card-title">Deutsche Bank Creative Awards</h3>
-                        <p class="card-desc">Winner (2012).</p>
-                    </div>
+                    <span class="project-main-title">Deutsche Bank Creative Awards</span>
+                    <span class="project-subtitle">Creative Recognition</span>
+                    <p class="card-desc" style="margin-bottom: 0;">
+                        Winner (2012).
+                    </p>
                 </div>
 
             </div>
+
         </div>
     </div>
 
-    <!-- CONTACT -->
-    <div id="contact" class="page-content" style="text-align: center;">
+    <div id="contact" class="page-content">
         <div class="subpage-inner">
 
             <div class="section-header">
                 <h2 class="section-title">Get In Touch</h2>
                 <div class="section-divider"></div>
-                <p style="color: var(--text-muted); font-size: 1.05rem; margin-top: 1rem;">
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.4rem; font-weight: 300;">
                     Currently taking on select projects, let's collaborate.
                 </p>
             </div>
 
-            <div class="contact-container">
-                <div class="btn-row">
-                    <a href="mailto:elhayekmira@gmail.com" class="btn">Email Me</a>
-                </div>
+            <div class="contact-card-wrapper">
+                
+                <a href="https://wa.me/96170266883" target="_blank" rel="noopener noreferrer" class="contact-pill-item">
+                    <div class="pill-icon-circle">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span class="pill-text">+961 70 266 883</span>
+                </a>
 
-                <div class="btn-row">
-                    <a href="https://wa.me/96170266883" target="_blank" rel="noopener noreferrer" class="btn">WhatsApp</a>
-                    <a href="https://www.linkedin.com/in/mirahayek/" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
-                </div>
+                <a href="mailto:elhayekmira@gmail.com" class="contact-pill-item">
+                    <div class="pill-icon-circle">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <span class="pill-text">elhayekmira@gmail.com</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/mirahayek/" target="_blank" rel="noopener noreferrer" class="contact-pill-item">
+                    <div class="pill-icon-circle">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <span class="pill-text">linkedin.com/in/mirahayek</span>
+                </a>
+
             </div>
 
         </div>
     </div>
 
-    <!-- FOOTER -->
-    <footer>
+    <footer class="contact-footer-override">
         <p>© Mira El Hayek</p>
     </footer>
 
-    <!-- JAVASCRIPT -->
     <script>
         function showPage(pageId, element) {
+            // Hide all pages
             const pages = document.querySelectorAll('.page-content');
             pages.forEach(page => page.classList.remove('active'));
 
+            // Reset navigation active state
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => link.classList.remove('active'));
 
-            document.getElementById(pageId).classList.add('active');
+            // Show active page
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
 
+            // Highlight active nav item
             if (element) {
                 element.classList.add('active');
             } else {
                 navLinks.forEach(link => {
-                    if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(pageId)) {
+                    if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(`'${pageId}'`)) {
                         link.classList.add('active');
                     }
                 });
+            }
+
+            // Sync URL hash state
+            if (history.pushState) {
+                history.pushState(null, null, '#' + pageId);
+            } else {
+                location.hash = '#' + pageId;
             }
 
             window.scrollTo({
@@ -1035,6 +1190,24 @@
                 behavior: 'smooth'
             });
         }
+
+        // Handle page reload or initial deep-linking
+        window.addEventListener('DOMContentLoaded', () => {
+            const currentHash = window.location.hash.replace('#', '');
+            if (currentHash && document.getElementById(currentHash)) {
+                showPage(currentHash);
+            } else {
+                showPage('home');
+            }
+        });
+
+        // Handle browser Back / Forward buttons
+        window.addEventListener('popstate', () => {
+            const currentHash = window.location.hash.replace('#', '') || 'home';
+            if (document.getElementById(currentHash)) {
+                showPage(currentHash);
+            }
+        });
     </script>
 
 </body>
