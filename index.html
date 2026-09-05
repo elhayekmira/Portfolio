@@ -153,6 +153,11 @@
             border-bottom: 2px solid var(--accent-ochre);
         }
 
+        /* Desktop vs Mobile Menu Text Toggle */
+        .mobile-text {
+            display: none;
+        }
+
         /* HOME SECTION */
         .home-section {
             min-height: 100vh;
@@ -199,6 +204,13 @@
             margin-bottom: 1.2rem;
             letter-spacing: 0.5px;
             text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .role-dot {
+            font-size: 0.75rem;
+            vertical-align: middle;
+            margin: 0 0.35rem;
+            opacity: 0.8;
         }
 
         .about-text {
@@ -372,16 +384,17 @@
 
         .card-tag {
             color: var(--accent-ochre);
-            font-size: 0.95rem;
+            font-size: 1.25rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
+            display: block;
         }
 
         .card-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 0.5rem 0 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0.3rem 0 0.5rem;
             color: #ffffff;
         }
 
@@ -520,21 +533,31 @@
         }
 
         @media (max-width: 768px) {
+            /* Toggle Desktop vs Mobile text labels */
+            .desktop-text {
+                display: none;
+            }
+
+            .mobile-text {
+                display: inline;
+            }
+
             nav {
                 justify-content: center;
-                padding: 0.8rem 4%;
+                padding: 0.8rem 3%;
             }
 
             .nav-links {
                 width: 100%;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 0.35rem 0.5rem;
-                justify-items: center;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0;
             }
 
             .nav-link {
-                font-size: 0.76rem;
+                font-size: 0.78rem;
+                padding: 0.2rem 0;
             }
 
             .home-section {
@@ -592,9 +615,18 @@
     <nav>
         <div class="nav-links">
             <span class="nav-link active" onclick="showPage('home', this)">Home</span>
-            <span class="nav-link" onclick="showPage('media', this)">Media Work</span>
-            <span class="nav-link" onclick="showPage('translation', this)">Translation Work</span>
-            <span class="nav-link" onclick="showPage('subtitles', this)">Transcription & Subtitles</span>
+            <span class="nav-link" onclick="showPage('media', this)">
+                <span class="desktop-text">Media Work</span>
+                <span class="mobile-text">Media Work</span>
+            </span>
+            <span class="nav-link" onclick="showPage('translation', this)">
+                <span class="desktop-text">Translation Work</span>
+                <span class="mobile-text">Translation</span>
+            </span>
+            <span class="nav-link" onclick="showPage('subtitles', this)">
+                <span class="desktop-text">Transcription & Subtitles</span>
+                <span class="mobile-text">Subtitles</span>
+            </span>
             <span class="nav-link" onclick="showPage('awards', this)">Awards</span>
             <span class="nav-link" onclick="showPage('contact', this)">Contact</span>
         </div>
@@ -609,7 +641,7 @@
                 <h1 class="hero-title">Mira El Hayek</h1>
 
                 <p class="hero-role">
-                    Producer • Video Editor • Published Translator
+                    Producer <span class="role-dot">•</span> Video Editor <span class="role-dot">•</span> Published Translator
                 </p>
 
                 <p class="about-text">
@@ -619,7 +651,7 @@
                 <div class="clients-section">
 
                     <span class="trusted-label">
-                        Trusted by:
+                        Trusted by
                     </span>
 
                     <div class="client-logos-wrapper">
@@ -644,9 +676,6 @@
             <div class="section-header">
                 <h2 class="section-title">Selected Media Work</h2>
                 <div class="section-divider"></div>
-                <p class="section-intro">
-                    I started my journey in media as an editor for Al Sumaria TV, then moved to the BBC before starting my freelance journey collaborating with major international names like Al Jazeera and NOS Nieuws, as well as independent filmmakers. Here is a selection of my recent work:
-                </p>
             </div>
 
             <div class="grid">
@@ -671,7 +700,7 @@
                     </div>
                     <div class="link-group">
                         <a href="https://www.alarabyplus.com/ar/shows/ma-ikhtalafna" target="_blank" rel="noopener noreferrer" class="link-btn">
-                            Watch on Al Araby Plus →
+                            Watch on Al Araby Plus
                         </a>
                     </div>
                 </div>
@@ -686,13 +715,13 @@
                     </div>
                     <div class="link-group">
                         <a href="https://www.youtube.com/watch?v=5gsqGUOcnxo&list=PLJDP7klg61pI" target="_blank" rel="noopener noreferrer" class="link-btn">
-                            Stories I produced for the BBC →
+                            Stories I produced for the BBC
                         </a>
                         <a href="https://www.youtube.com/watch?v=G6iv-6H5y0w&list=PLWy7CFm-iR3Y" target="_blank" rel="noopener noreferrer" class="link-btn">
-                            Editing BBC Xtra Weekly Magazine →
+                            Editing BBC Xtra Weekly Magazine
                         </a>
                         <a href="https://www.youtube.com/watch?v=TMdGg5JpPNQ&list=PLOtYxGAGzkHU&pp=sAgC" target="_blank" rel="noopener noreferrer" class="link-btn">
-                            Editing AL MASHHAD with Gisele Khoury →
+                            Editing AL MASHHAD with Gisele Khoury
                         </a>
                     </div>
                 </div>
@@ -708,9 +737,6 @@
             <div class="section-header">
                 <h2 class="section-title">Selected Translation Work</h2>
                 <div class="section-divider"></div>
-                <p class="section-intro">
-                    As a published translator, I translate and copyedit submission dossiers, articles, and literary books. I also provide transcriptions and subtitles for films. Here is a selection of my recent work:
-                </p>
             </div>
 
             <div class="translation-container">
@@ -723,7 +749,7 @@
                     </p>
                     <div class="link-group">
                         <a href="https://www.dohafilm.com/en/contents/0c7b314a-16c2-4d15-8eb5-7ec410dde095" target="_blank" rel="noopener noreferrer" class="link-btn">
-                            View on Doha Film Institute (Still in Development) →
+                            View on Doha Film Institute (Still in Development)
                         </a>
                     </div>
                 </div>
@@ -769,7 +795,7 @@
 
                 <div class="card full-width-card">
                     <span class="card-tag">Journalism & Features</span>
-                    <h3 class="card-title">L'Orient-Le Jour Translations</h3>
+                    <h3 class="card-title">L'Orient-Le Jour</h3>
                     <p class="card-desc">Selected journalistic and essay translations for L'Orient-Le Jour.</p>
 
                     <div class="lorient-grid">
@@ -830,9 +856,6 @@
             <div class="section-header">
                 <h2 class="section-title">Transcription & Subtitles</h2>
                 <div class="section-divider"></div>
-                <p class="section-intro">
-                    Professional transcription, post-production subtitle creation, and translation for feature films, documentaries, and investigative podcasts.
-                </p>
             </div>
 
             <div class="grid">
@@ -846,7 +869,7 @@
                         </p>
                     </div>
                     <div class="link-group">
-                        <a href="https://bagdad.institutfrancais-irak.com/La-fille-au-pied-d-argent-De-Zahraa-Ghandour" target="_blank" rel="noopener noreferrer" class="link-btn">View on French Institute Baghdad →</a>
+                        <a href="https://bagdad.institutfrancais-irak.com/La-fille-au-pied-d-argent-De-Zahraa-Ghandour" target="_blank" rel="noopener noreferrer" class="link-btn">View on French Institute Baghdad</a>
                     </div>
                 </div>
 
@@ -859,8 +882,8 @@
                         </p>
                     </div>
                     <div class="link-group">
-                        <a href="https://www.imdb.com/title/tt37815968/" target="_blank" rel="noopener noreferrer" class="link-btn">View on IMDb →</a>
-                        <a href="https://www.youtube.com/watch?v=CL0fhT4SfqE" target="_blank" rel="noopener noreferrer" class="link-btn">Watch Trailer →</a>
+                        <a href="https://www.imdb.com/title/tt37815968/" target="_blank" rel="noopener noreferrer" class="link-btn">View on IMDb</a>
+                        <a href="https://www.youtube.com/watch?v=CL0fhT4SfqE" target="_blank" rel="noopener noreferrer" class="link-btn">Watch Trailer</a>
                     </div>
                 </div>
 
@@ -873,7 +896,7 @@
                         </p>
                     </div>
                     <div class="link-group">
-                        <a href="https://www.imdb.com/title/tt13222912/" target="_blank" rel="noopener noreferrer" class="link-btn">View on IMDb →</a>
+                        <a href="https://www.imdb.com/title/tt13222912/" target="_blank" rel="noopener noreferrer" class="link-btn">View on IMDb</a>
                     </div>
                 </div>
 
@@ -886,7 +909,7 @@
                         </p>
                     </div>
                     <div class="link-group">
-                        <a href="https://kerningcultures.com/kerning-cultures-to-launch-the-lebanon-heist-this-summer/" target="_blank" rel="noopener noreferrer" class="link-btn">Listen / Read Announcement →</a>
+                        <a href="https://kerningcultures.com/kerning-cultures-to-launch-the-lebanon-heist-this-summer/" target="_blank" rel="noopener noreferrer" class="link-btn">Listen / Read Announcement</a>
                     </div>
                 </div>
 
